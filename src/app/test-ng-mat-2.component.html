@@ -1,3 +1,42 @@
 <h1>
   {{title}}
 </h1>
+
+<div class="log-card-and-actions">
+  <md-card>
+    <div class="log-card">
+      <a href="#" class="log-link">
+        <md-card-title>
+          <h2 class="error"><md-icon>error</md-icon><span class="heading-content">FAC-1</span></h2>
+        </md-card-title>
+        <md-card-content>
+          <span>This Log has an issue.</span>
+          <div class="log-ids" *ngIf="true">
+            <p>
+              <button class="md-icon-button md-primary copy-to-clipboard" aria-label="Copy to clipboard">
+                <md-icon>content_copy</md-icon>
+              </button>
+              HexID:<span>64616e6765727a6f6e65</span>
+
+            </p>
+            <p>
+              <button class="md-icon-button md-primary copy-to-clipboard" aria-label="Copy to clipboard">
+                <md-icon>content_copy</md-icon>
+              </button>
+              Base64Id:<span>NjQ2MTZlNjc2NTcyN2E2ZjZlNjU=</span>
+
+            </p>
+          </div>
+        </md-card-content>
+      </a>
+    </div>
+  </md-card>
+  <div class="log-actions">
+    <button md-fab>
+      <md-icon>bug_report</md-icon>
+    </button>
+    <button md-fab>
+      <md-icon>email</md-icon>
+    </button>
+  </div>
+</div>
