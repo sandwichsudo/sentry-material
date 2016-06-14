@@ -1,4 +1,4 @@
-export class Log {
+export class Log{
   id: number;
   name: string;
   priority: number;
@@ -6,7 +6,17 @@ export class Log {
   base64id: string;
   authority: string;
   bugUrl: string;
-  contactDetails: Array<number>;
+  contactDetails: string[];
+  constructor(jsonLog){
+    this.id= jsonLog.id;
+    this.name= jsonLog.name;
+    this.priority= jsonLog.priority;
+    this.hexid= jsonLog.hexid;
+    this.base64id= jsonLog.base64id;
+    this.authority= jsonLog.authority;
+    this.bugUrl= jsonLog.bugUrl;
+    this.contactDetails= jsonLog.contractDetails;
+  }
   getStatusClass(): string {
     var statusClass: string;
     switch (this.priority) {

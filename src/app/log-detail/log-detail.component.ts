@@ -29,7 +29,11 @@ export class LogDetailComponent implements OnInit {
   ngOnInit() {
     let id = +this.routeParams.get('id');
     this.logService.getLog(id)
-      .then(log => this.log = log);
+      .then(log => {
+        this.log = new Log(log);
+        console.log(this.log);
+        console.log(this.log.getStatusClass());
+      });
   }
 
   goBack() {
