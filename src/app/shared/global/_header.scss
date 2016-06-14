@@ -1,16 +1,55 @@
 @import '../global/colour-palette.scss';
 @import '../global/_utils.scss';
-.app-header{
+.app-header {
   background-color: $primary-color;
   border-top: 1em solid $primary-color-dark;
-  padding: 0 $side-margin 2em $side-margin;
-  h1{
-    margin-bottom:0;
+  padding-bottom: 2em;
+  padding-top: 1em;
+  .header-content {
+    margin: 0 $side-margin-right 0 $side-margin-left;
   }
-  .md-subtitle{
-    font-family:'Roboto';
+  h1 {
+    margin-bottom: 0;
+    margin-top: 10px;
   }
-  .md-subtitle, h1{
-        color:$primary-color-text;
+  .md-subtitle {
+    font-family: 'Roboto';
+  }
+  .app-toolbar-menu,
+  .md-subtitle,
+  h1 {
+    color: $primary-color-text;
+  }
+  button {
+    border-radius: 30px;
+    padding: 5px;
+    min-width: 40px;
+    min-height: 40px;
+    line-height: 16px;
+    margin-left: 1em;
+  }
+}
+md-sidenav {
+  nav {
+    margin-top: 3em;
+  }
+  a {
+    font-family: 'Roboto';
+    color: $primary-text-color;
+    padding: 1em 4em 1em 1.5em;
+    text-decoration: none;
+    display: block;
+    .router-link-active {
+      color: $accent-color;
+    }
+    &:hover {
+      background-color: $side-nav-hover;
+    }
+    &:active {
+      color: $secondary-text-color;
+    }
+  }
+  .app-icon {
+    color: $primary-color-dark;
   }
 }

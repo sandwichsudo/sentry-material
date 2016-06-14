@@ -1,7 +1,19 @@
-<header class="app-header">
-  <h1 class="md-display-1">{{title}}</h1>
-  <p class="md-subtitle">{{subtitle}}</p>
-</header>
-<nav><a [routerLink]="['Dashboard']">Dashboard</a>
-<a [routerLink]="['Logs']">Logs</a></nav>
-<router-outlet></router-outlet>
+<md-sidenav-layout>
+
+  <md-sidenav #sidenav mode="side" class="app-sidenav">
+    <nav><a [routerLink]="['Dashboard']">Dashboard</a>
+      <a [routerLink]="['Logs']">Logs</a></nav>
+  </md-sidenav>
+
+  <header class="app-header">
+    <button md-button class="app-icon-button" (click)="sidenav.toggle()">
+      <i class="material-icons app-toolbar-menu">menu</i>
+    </button>
+    <div class="header-content">
+      <h1 class="md-display-1">{{title}}</h1>
+      <p class="md-subtitle">{{subtitle}}</p>
+    </div>
+  </header>
+
+  <router-outlet></router-outlet>
+</md-sidenav-layout>
