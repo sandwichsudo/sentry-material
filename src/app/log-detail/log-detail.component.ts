@@ -31,8 +31,6 @@ export class LogDetailComponent implements OnInit {
     this.logService.getLog(id)
       .then(log => {
         this.log = new Log(log);
-        console.log(this.log);
-        console.log(this.log.getStatusClass());
       });
   }
 

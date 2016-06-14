@@ -2,7 +2,7 @@
   <div class="log-card">
     <div class="log-container">
       <md-card-title>
-        <h2 class="error"><md-icon>error</md-icon><span class="heading-content">{{log.name}}</span></h2>
+        <h2 class="{{log.getStatusClass()}}"><md-icon>{{log.getIcon()}}</md-icon><span class="heading-content">{{log.name}}</span></h2>
       </md-card-title>
       <md-card-content>
         <span>This Log has an issue.</span>

@@ -1,17 +1,21 @@
 @import "colour-palette";
-
 .error {
-  color: $error-color;
+  md-icon {
+    color: $error-color;
+  }
 }
-
 .warning {
-  color: $warning-color;
+  md-icon {
+    color: $warning-color;
+  }
 }
-
 .info {
-  color: $info-color;
+  md-icon {
+    color: $info-color;
+  }
 }
-
 .working {
-  color: $working-color;
+  md-icon {
+    color: $working-color;
+  }
 }

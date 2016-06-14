@@ -8,7 +8,7 @@ import {MdIcon, MdIconRegistry} from '@angular2-material/icon';
 @Component({
   selector: 'my-logs',
   templateUrl: './app/logs/logs.component.html',
-  styleUrls:['./app/logs/logs.component.css'],
+  styleUrls: ['./app/logs/logs.component.css'],
   directives: [MdIcon],
   providers: [MdIconRegistry]
 })
@@ -18,7 +18,12 @@ export class LogsComponent implements OnInit {
     private router: Router,
     private logService: LogService) { }
   getLogs() {
-    this.logService.getLogs().then(logs => this.logs = logs);
+    this.logService.getLogs().then(logs => {
+      this.logs = new Array<Log>();
+      for (var log of logs) {
+        this.logs.push(new Log(log));
+      }
+    });
   }
   ngOnInit() {
     this.getLogs();

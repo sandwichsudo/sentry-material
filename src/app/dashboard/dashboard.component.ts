@@ -20,13 +20,19 @@ import {MdIcon, MdIconRegistry} from '@angular2-material/icon';
 })
 export class DashboardComponent implements OnInit {
     logs: Log[] = [];
+    filteredLogs: Log[] = [];
     constructor(private router: Router, private logService: LogService) { }
     hasIssue(log: Log) {
       return log.priority > -1;
     }
     ngOnInit() {
         this.logService.getLogs()
-            .then(logs => this.logs = logs.filter(this.hasIssue));
+            .then(logs => {
+              this.filteredLogs = logs.filter(this.hasIssue);
+              for (var log of this.filteredLogs) {
+                this.logs.push(new Log(log));
+              }
+            });
     }
     gotoDetail(log: Log) {
         let link = ['LogDetail', { id: log.id }];

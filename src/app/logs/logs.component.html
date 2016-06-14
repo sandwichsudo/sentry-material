@@ -1,10 +1,7 @@
 <h2>My Logs</h2>
 <ul class="logs">
-  <li *ngFor="let log of logs"
-    [class.selected]="log === selectedLog"
-    (click)="gotoDetail(log.id)">
-    <span>
-      <md-icon>error</md-icon>
+  <li *ngFor="let log of logs" [class.selected]="log === selectedLog" (click)="gotoDetail(log.id)">
+    <span class="{{log.getStatusClass()}}"><md-icon>{{log.getIcon()}}</md-icon>
       <span class="heading-content">{{log.name}}</span>
     </span>
   </li>

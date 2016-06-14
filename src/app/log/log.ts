@@ -1,4 +1,4 @@
-export class Log{
+export class Log {
   id: number;
   name: string;
   priority: number;
@@ -7,15 +7,12 @@ export class Log{
   authority: string;
   bugUrl: string;
   contactDetails: string[];
-  constructor(jsonLog){
-    this.id= jsonLog.id;
-    this.name= jsonLog.name;
-    this.priority= jsonLog.priority;
-    this.hexid= jsonLog.hexid;
-    this.base64id= jsonLog.base64id;
-    this.authority= jsonLog.authority;
-    this.bugUrl= jsonLog.bugUrl;
-    this.contactDetails= jsonLog.contractDetails;
+  constructor(jsonLog) {
+    for (let prop in jsonLog) {
+      if (jsonLog.hasOwnProperty(prop)) {
+        this[prop] = jsonLog[prop];
+      }
+    }
   }
   getStatusClass(): string {
     var statusClass: string;
