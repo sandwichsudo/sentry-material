@@ -1,0 +1,13 @@
+<div *ngIf="log">
+
+  <span class="badge">{{log.priority}}</span>
+  <h2>{{log.name}}</h2>
+  <span  *ngIf="log.priority> -1" >This Log has an issue.</span>
+  <dl>
+    <dt>HexID</dt>
+    <dd>{{log.hexid}}</dd>
+    <dt>Base64Id</dt>
+    <dd>{{log.base64id}}</dd>
+  </dl>
+  <button (click)="goBack()">Back</button>
+</div>

@@ -1,6 +1,7 @@
-<h1>
-  {{title}}
-</h1>
+<h1>{{title}}</h1>
+<nav><a [routerLink]="['Dashboard']">Dashboard</a>
+<a [routerLink]="['Logs']">Logs</a></nav>
+<router-outlet></router-outlet>
 
 <div class="log-card-and-actions">
   <md-card>
