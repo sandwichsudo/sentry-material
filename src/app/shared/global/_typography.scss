@@ -1,0 +1,32 @@
+%heading{
+  font-family:'Roboto';
+  font-weight: normal;
+}
+.md-display-4 {
+
+  font-size: 112px;
+}
+.md-display-3 {
+  @extend %heading;
+  font-size: 56px;
+}
+.md-display-2 {
+  @extend %heading;
+  font-size: 45px;
+}
+.md-display-1 {
+  @extend %heading;
+  font-size: 34px;
+}
+.md-headline {
+  @extend %heading;
+  font-size: 24px;
+}
+.md-title {
+  @extend %heading;
+  font-size: 20px;
+}
+.md-subhead {
+  @extend %heading;
+  font-size: 16px;
+}

@@ -38,4 +38,5 @@ import { LogDetailComponent } from './log-detail/log-detail.component';
 
 export class TestNgMat2AppComponent {
   title = 'Sentry';
+  subtitle = 'Certificate transparency log monitoring app.';
 }
