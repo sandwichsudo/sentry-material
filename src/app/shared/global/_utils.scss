@@ -4,3 +4,10 @@ $side-margin-right:2em;
 .with-icon {
   vertical-align: middle;
 }
+%round-icon-button{
+  border-radius: 30px;
+  padding: 5px;
+  min-width: 40px;
+  min-height: 40px;
+  line-height: 16px;
+}

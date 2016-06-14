@@ -1,5 +1,5 @@
 @import '../global/colour-palette.scss';
-
+@import '../global/_utils.scss';
 .log-card {
   padding: 0;
   background: none;
@@ -44,5 +44,11 @@
   [md-fab] {
     background-color: $accent-color;
     margin-top: 0.5em;
+  }
+  .log-action{
+      @extend %round-icon-button;
+      background:none;
+      border:none;
+      color:$secondary-text-color;
   }
 }

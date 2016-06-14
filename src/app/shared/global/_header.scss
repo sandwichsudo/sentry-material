@@ -20,13 +20,11 @@
   h1 {
     color: $primary-color-text;
   }
+
   button {
-    border-radius: 30px;
-    padding: 5px;
-    min-width: 40px;
-    min-height: 40px;
-    line-height: 16px;
+    @extend %round-icon-button;
     margin-left: 1em;
+
   }
 }
 md-sidenav {
@@ -39,7 +37,7 @@ md-sidenav {
     padding: 1em 4em 1em 1.5em;
     text-decoration: none;
     display: block;
-    .router-link-active {
+    &.router-link-active {
       color: $accent-color;
     }
     &:hover {
