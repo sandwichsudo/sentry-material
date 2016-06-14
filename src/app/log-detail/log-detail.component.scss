@@ -1,0 +1,14 @@
+@import '../shared/global/colour-palette.scss';
+@import '../shared/log-info/log-info.scss';
+.copy-to-clipboard {
+  background: none;
+  border: none;
+  padding: 5px;
+}
+
+.copy-to-clipboard{
+  md-icon{
+    vertical-align: middle;
+  }
+  font-size:14px;
+}

@@ -3,9 +3,9 @@
   <li *ngFor="let log of logs"
     [class.selected]="log === selectedLog"
     (click)="gotoDetail(log.id)">
-    <span class="badge">{{log.priority}}</span>
-    <h3>{{log.name}}</h3>
-    <span  *ngIf="log.priority> -1" >This Log has an issue.</span>
-  
+    <span>
+      <md-icon>error</md-icon>
+      <span class="heading-content">{{log.name}}</span>
+    </span>
   </li>
 </ul>

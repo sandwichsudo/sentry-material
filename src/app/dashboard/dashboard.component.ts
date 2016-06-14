@@ -4,10 +4,19 @@ import { Router } from '@angular/router-deprecated';
 import { Log } from '../log/log';
 import { LogService } from '../log.service/log.service';
 
+// material directives
+import {MD_CARD_DIRECTIVES} from '@angular2-material/card';
+import { MD_BUTTON_DIRECTIVES } from '@angular2-material/button';
+import {MdIcon, MdIconRegistry} from '@angular2-material/icon';
+
+
 @Component({
     selector: 'my-dashboard',
     styleUrls: ['./app/dashboard/dashboard.component.css'],
-    templateUrl: './app/dashboard/dashboard.component.html'
+    templateUrl: './app/dashboard/dashboard.component.html',
+    directives: [MD_CARD_DIRECTIVES, MD_BUTTON_DIRECTIVES, MdIcon],
+    providers: [MdIconRegistry,
+      LogService]
 })
 export class DashboardComponent implements OnInit {
     logs: Log[] = [];

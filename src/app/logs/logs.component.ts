@@ -3,11 +3,14 @@ import { Log } from '../log/log';
 import { LogDetailComponent } from '../log-detail/log-detail.component';
 import { LogService } from '../log.service/log.service';
 import { Router } from '@angular/router-deprecated';
+import {MdIcon, MdIconRegistry} from '@angular2-material/icon';
 
 @Component({
   selector: 'my-logs',
   templateUrl: './app/logs/logs.component.html',
-  styleUrls:['./app/logs/logs.component.css']
+  styleUrls:['./app/logs/logs.component.css'],
+  directives: [MdIcon],
+  providers: [MdIconRegistry]
 })
 export class LogsComponent implements OnInit {
   logs: Log[];

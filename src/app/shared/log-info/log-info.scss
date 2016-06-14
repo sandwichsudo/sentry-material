@@ -1,0 +1,48 @@
+@import '../global/colour-palette.scss';
+
+.log-card {
+  padding: 0;
+  background: none;
+  h2 {
+    margin-top: 0;
+    md-icon{
+      font-size: inherit;
+    }
+    .heading-content{
+      margin-left: 0.5em;
+    }
+    .heading-content, md-icon{
+      vertical-align: top;
+    }
+  }
+}
+.list{
+  margin:0;
+  padding:0;
+  list-style: none;
+}
+
+.log-container {
+  text-decoration: none;
+  color: $primary-text-color;
+  display: block;
+  padding: 1em 5.5em 1em 1em;
+}
+.log-card-and-actions {
+  position: relative;
+  margin-bottom: 1em;
+  md-card {
+    padding: 0;
+  }
+}
+
+.log-actions {
+  width: 60px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  [md-fab] {
+    background-color: $primary-color;
+    margin-top: 0.5em;
+  }
+}

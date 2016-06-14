@@ -1,8 +1,27 @@
-<h3>Top Logs</h3>
-<div class="grid grid-pad">
-  <div *ngFor="let log of logs" (click)="gotoDetail(log)" class="col-1-4">
-    <div class="module log">
-      <h4>{{log.name}}</h4>
+<h3>Active Bugs:</h3>
+<ul class="list">
+  <li *ngFor="let log of logs">
+    <div class="log-card-and-actions">
+      <md-card>
+        <div class="log-card">
+          <a class="log-container" (click)="gotoDetail(log)">
+            <md-card-title>
+              <h2 class="error"><md-icon>error</md-icon><span class="heading-content">{{log.name}}</span></h2>
+            </md-card-title>
+            <md-card-content>
+              <span>This Log has an issue.</span>
+            </md-card-content>
+          </a>
+        </div>
+      </md-card>
+      <div class="log-actions">
+        <button md-fab href="#">
+          <md-icon>bug_report</md-icon>
+        </button>
+        <button md-fab href="#">
+          <md-icon>email</md-icon>
+        </button>
+      </div>
     </div>
-  </div>
-</div>
+  </li>
+</ul>

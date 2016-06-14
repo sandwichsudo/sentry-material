@@ -1,13 +1,33 @@
-<div *ngIf="log">
-
-  <span class="badge">{{log.priority}}</span>
-  <h2>{{log.name}}</h2>
-  <span  *ngIf="log.priority> -1" >This Log has an issue.</span>
-  <dl>
-    <dt>HexID</dt>
-    <dd>{{log.hexid}}</dd>
-    <dt>Base64Id</dt>
-    <dd>{{log.base64id}}</dd>
-  </dl>
-  <button (click)="goBack()">Back</button>
+<div class="log-card-and-actions" *ngIf="log">
+  <div class="log-card">
+    <div class="log-container">
+      <md-card-title>
+        <h2 class="error"><md-icon>error</md-icon><span class="heading-content">{{log.name}}</span></h2>
+      </md-card-title>
+      <md-card-content>
+        <span>This Log has an issue.</span>
+        <div class="log-ids">
+          <p>
+            <button md-button title="copy to clipboard" class="copy-to-clipboard" aria-label="Copy to clipboard">
+              <md-icon>content_copy</md-icon><span class="with-icon">HexID:<span>{{log.hexid}}</span></span>
+            </button>
+          </p>
+          <p>
+            <button md-button title="copy to clipboard" class="copy-to-clipboard" aria-label="Copy to clipboard">
+              <md-icon>content_copy</md-icon><span class="with-icon">Base64Id:<span>{{log.base64id}}</span></span>
+            </button>
+          </p>
+        </div>
+      </md-card-content>
+    </div>
+  </div>
+  <div class="log-actions">
+    <button md-fab>
+      <md-icon>bug_report</md-icon>
+    </button>
+    <button md-fab>
+      <md-icon>email</md-icon>
+    </button>
+  </div>
 </div>
+<!-- <button (click)="goBack()">Back</button> -->
