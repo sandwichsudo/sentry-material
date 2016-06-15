@@ -19,3 +19,30 @@
     color: $working-color;
   }
 }
+.message-container {
+  padding: 10px 10px 10px 18px;
+  display: block;
+  margin: 0 20px;
+  position: fixed;
+  top: 10px;
+  width: 84%;
+  border-radius: 3px;
+  .content,
+  md-icon {
+    color: white;
+    margin-right:5px;
+    vertical-align: middle;
+  }
+  &.error {
+      background-color: $error-color;
+  }
+  &.warning {
+      background-color: $warning-color;
+  }
+  &.info {
+      background-color: $info-color;
+  }
+  &.working {
+      background-color: $working-color;
+  }
+}

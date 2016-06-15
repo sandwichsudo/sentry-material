@@ -1,4 +1,5 @@
-export class Log {
+import {Status} from '../status/status';
+export class Log extends Status{
   id: number;
   name: string;
   priority: number;
@@ -8,45 +9,7 @@ export class Log {
   bugUrl: string;
   contactDetails: string[];
   constructor(jsonLog) {
-    for (let prop in jsonLog) {
-      if (jsonLog.hasOwnProperty(prop)) {
-        this[prop] = jsonLog[prop];
-      }
-    }
-  }
-  getStatusClass(): string {
-    var statusClass: string;
-    switch (this.priority) {
-      case 0:
-        statusClass = 'info';
-        break;
-      case 1:
-        statusClass = 'warning';
-        break;
-      case 2:
-        statusClass = 'error';
-        break;
-      default:
-        statusClass = 'working';
-    }
-    return statusClass;
-  }
-  getIcon(): string {
-    var iconText: string;
-    switch (this.priority) {
-      case 0:
-        iconText = 'info';
-        break;
-      case 1:
-        iconText = 'warning';
-        break;
-      case 2:
-        iconText = 'error';
-        break;
-      default:
-        iconText = 'check_circle';
-    }
-    return iconText;
+    super(jsonLog);
   }
   getStatusMessage(): string {
     var messageText: string;
