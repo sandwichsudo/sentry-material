@@ -16,7 +16,7 @@ import {MdIcon, MdIconRegistry} from '@angular2-material/icon';
   templateUrl: './app/log-detail/log-detail.component.html',
   directives: [MD_CARD_DIRECTIVES, MD_BUTTON_DIRECTIVES, MdIcon],
   providers: [MdIconRegistry,
-    LogService, NotificationService]
+    LogService]
 
 })
 export class LogDetailComponent implements OnInit {
