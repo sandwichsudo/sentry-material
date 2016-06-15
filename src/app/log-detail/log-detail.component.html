@@ -16,14 +16,16 @@
         <p>{{log.getStatusMessage()}}</p>
         <div class="log-ids">
           <p>
-            <button md-button title="copy to clipboard" class="copy-to-clipboard" aria-label="Copy to clipboard">
+            <button md-button (click)= "copyToClipboard('hexid')" title="copy to clipboard" class="copy-to-clipboard" aria-label="Copy to clipboard">
               <md-icon>content_copy</md-icon><span class="with-icon">HexID <span>{{log.hexid}}</span></span>
             </button>
+            <input value="{{log.hexid}}" class="copy-helper" name="hexid" type="text">
           </p>
           <p>
-            <button md-button title="copy to clipboard" class="copy-to-clipboard" aria-label="Copy to clipboard">
+            <button md-button (click)= "copyToClipboard('base64id')" title="copy to clipboard" class="copy-to-clipboard" aria-label="Copy to clipboard">
               <md-icon>content_copy</md-icon><span class="with-icon">Base64Id <span>{{log.base64id}}</span></span>
             </button>
+              <input value="{{log.base64id}}" class="copy-helper" name="base64id" type="text">
           </p>
         </div>
       </md-card-content>

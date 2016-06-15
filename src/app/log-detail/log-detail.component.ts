@@ -38,4 +38,26 @@ export class LogDetailComponent implements OnInit {
     window.history.back();
   }
 
+  copyToClipboard(idType: string){
+    let clipboardInfo = "";
+    if(idType=='base64id'){
+      clipboardInfo = this.log.base64id;
+    } else {
+      clipboardInfo = this.log.hexid;
+    }
+    //get hidden input
+    let input = <HTMLInputElement> document.querySelector(`[name=${idType}]`);
+    //select text
+    input.select();
+    //copy to clipboard and generate notification
+    try{
+        document.execCommand('copy');
+          console.log('copied');
+    } catch (err){
+      console.log(err);
+    }
+
+
+  }
+
 }
