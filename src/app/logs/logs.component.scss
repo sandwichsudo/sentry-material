@@ -4,29 +4,13 @@
   margin: 0 $side-margin-right 0 $side-margin-left;
 }
 .logs {
-  margin: 0 0 2em 0;
   list-style-type: none;
   padding: 0;
+  @extend %boxed-list;
 }
-.logs li {
-  cursor: pointer;
-  position: relative;
-  left: 0;
-  background-color: #EEE;
-  margin: .5em;
-  padding: .3em 0;
-  border-radius: 4px;
-}
-.logs li.selected:hover {
-  background-color: #BBD8DC !important;
-  color: white;
-}
-.logs li:hover {
-  color: #607D8B;
-  background-color: #DDD;
-  left: .1em;
-}
-.logs .text {
-  position: relative;
-  top: -3px;
+.log-list-item{
+  md-icon{
+    vertical-align: middle;
+  }
+  @extend %link-list-item;
 }

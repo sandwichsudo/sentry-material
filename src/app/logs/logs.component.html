@@ -1,10 +1,10 @@
 <div class="logs-wrapper">
-  <h2>My Logs</h2>
+  <h2 class="md-title">My Logs</h2>
   <ul class="logs">
-    <li *ngFor="let log of logs" [class.selected]="log === selectedLog" (click)="gotoDetail(log.id)">
-      <span class="{{log.getStatusClass()}}"><md-icon>{{log.getIcon()}}</md-icon>
-        <span class="heading-content">{{log.name}}</span>
-      </span>
+    <li *ngFor="let log of logs" [class.selected]="log === selectedLog">
+      <a  (click)="gotoDetail(log.id)" class="{{log.getStatusClass()}} log-list-item"><md-icon>{{log.getIcon()}}</md-icon>
+        <span class="heading-content with-icon">{{log.name}}</span>
+      </a>
     </li>
   </ul>
 </div>

@@ -1,11 +1,7 @@
 @import '../shared/log-info/log-info.scss';
 @import '../shared/global/messaging.scss';
 @import '../shared/global/utils.scss';
-.copy-to-clipboard {
-  background: none;
-  border: none;
-  padding: 5px;
-}
+
 .copy-to-clipboard {
   md-icon {
     vertical-align: middle;
@@ -14,7 +10,16 @@
 }
 .log-detail-wrapper {
   margin: 0 $side-margin-right 0 $side-margin-left;
-  .log-container{
-    padding:1em 0 0 0;
+  .log-container {
+    padding: 1em 0 0;
   }
+}
+md-card-title {
+  border: solid 1px $accent-color;
+  display: block;
+  padding: 1em 1em 0;
+}
+.log-actions {
+  bottom: auto;
+  top: 28px;
 }

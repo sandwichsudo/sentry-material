@@ -1,13 +1,41 @@
-$side-margin-left: 5em;
-$side-margin-right:2em;
+@import '../global/colour-palette.scss';
 
+$side-margin-left: 3.5em;
+$side-margin-right: 2em;
 .with-icon {
   vertical-align: middle;
 }
-%round-icon-button{
+%round-icon-button {
   border-radius: 30px;
   padding: 5px;
   min-width: 30px;
   min-height: 30px;
   line-height: 16px;
+}
+%boxed-list{
+  border:1px solid $list-box-color;
+  li{
+    border-bottom: 1px solid $list-box-color;
+    &:last-child{
+      border-bottom:0;
+    }
+  }
+}
+%link-list-item {
+  font-family: 'Roboto';
+  color: $primary-text-color;
+  transition: background-color 1000ms linear;
+  padding: 1em 4em 1em 1.5em;
+  text-decoration: none;
+  display: block;
+  &.router-link-active {
+    color: $accent-color;
+  }
+  &:hover {
+    background-color: $side-nav-hover;
+    color:$primary-color-dark;
+  }
+  &:active {
+    color: $secondary-text-color;
+  }
 }

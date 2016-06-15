@@ -2,10 +2,18 @@
   <div class="log-card">
     <div class="log-container">
       <md-card-title>
-        <h2 class="{{log.getStatusClass()}}"><md-icon>{{log.getIcon()}}</md-icon><span class="heading-content">{{log.name}}</span></h2>
+        <h2 class="{{log.getStatusClass()}} md-headline"><md-icon>{{log.getIcon()}}</md-icon><span class="heading-content">{{log.name}}</span></h2>
+        <div class="log-actions">
+          <a href="{{log.bugUrl}}" class="log-action">
+            <md-icon>bug_report</md-icon>
+          </a>
+          <button md-button href="#" class="log-action">
+            <md-icon>email</md-icon>
+          </button>
+        </div>
       </md-card-title>
       <md-card-content>
-        <span>{{log.getStatusMessage()}}</span>
+        <p>{{log.getStatusMessage()}}</p>
         <div class="log-ids">
           <p>
             <button md-button title="copy to clipboard" class="copy-to-clipboard" aria-label="Copy to clipboard">
@@ -20,14 +28,6 @@
         </div>
       </md-card-content>
     </div>
-  </div>
-  <div class="log-actions">
-    <a href="{{log.bugUrl}}" class="log-action">
-      <md-icon>bug_report</md-icon>
-    </a>
-    <button md-button href="#" class="log-action">
-      <md-icon>email</md-icon>
-    </button>
   </div>
 </div>
 <!-- <button (click)="goBack()">Back</button> -->
