@@ -3,25 +3,26 @@
 .log-card {
   padding: 0;
   background: none;
+  color:$primary-text-color;
   h2 {
     margin-top: 0;
-    md-icon{
+    md-icon {
       font-size: inherit;
     }
-    .heading-content{
+    .heading-content {
       margin-left: 0.5em;
     }
-    .heading-content, md-icon{
+    .heading-content,
+    md-icon {
       vertical-align: top;
     }
   }
 }
-.list{
-  margin:0;
-  padding:0;
+.list {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
-
 .log-container {
   text-decoration: none;
   color: $primary-text-color;
@@ -35,9 +36,8 @@
     padding: 0;
   }
 }
-
 .log-actions {
-  width: 60px;
+  width: 100px;
   position: absolute;
   bottom: 10px;
   right: 10px;
@@ -45,10 +45,21 @@
     background-color: $accent-color;
     margin-top: 0.5em;
   }
-  .log-action{
-      @extend %round-icon-button;
-      background:none;
-      border:none;
-      color:$secondary-text-color;
+  .log-action {
+    @extend %round-icon-button;
+    background: none;
+    border: none;
+    color: $secondary-text-color;
+    text-decoration: none;
+    border-radius: 30px;
+    display:inline-block;
+    .material-icons {
+      font-size: 30px;
+      height: 30px;
+      width: 30px;
+    }
+    &:hover{
+      background-color: rgba(0, 0, 0, 0.12);
+    }
   }
 }

@@ -50,4 +50,7 @@ md-sidenav {
   .app-icon {
     color: $primary-color-dark;
   }
+  &.md-sidenav-opened{
+    box-shadow: rgba(0, 0, 0, 0.5) 12px 0px 19px !important;
+  }
 }

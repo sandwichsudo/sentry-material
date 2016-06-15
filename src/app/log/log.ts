@@ -35,18 +35,34 @@ export class Log {
     var iconText: string;
     switch (this.priority) {
       case 0:
-        iconText = 'info outline';
+        iconText = 'info';
         break;
       case 1:
-        iconText = 'warning outline';
+        iconText = 'warning';
         break;
       case 2:
-        iconText = 'error outline';
+        iconText = 'error';
         break;
       default:
-        iconText = 'lock outline';
+        iconText = 'check_circle';
     }
     return iconText;
-
+  }
+  getStatusMessage(): string {
+    var messageText: string;
+    switch (this.priority) {
+      case 0:
+        messageText = 'This log\'s availability has dropped.';
+        break;
+      case 1:
+        messageText = 'This log has failed it\'s probationary monitoring.';
+        break;
+      case 2:
+        messageText = 'This log has breached availability requirements.';
+        break;
+      default:
+        messageText = 'This log is working normally.';
+    }
+    return messageText;
   }
 }

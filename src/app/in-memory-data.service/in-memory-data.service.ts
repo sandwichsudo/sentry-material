@@ -3,7 +3,7 @@ export class InMemoryDataService {
         let logs = [{
             id: 1,
             name: 'FAC-1',
-            hexid: '64616e6765727a6f6e65',
+            hexid: '64:61:6e:67:65:72:7a:6f:6e:65',
             base64id: 'NjQ2MTZlNjc2NTcyN2E2ZjZlNjU=',
             authority: 'Facebook',
             bugUrl: 'www.google.com',
@@ -12,7 +12,7 @@ export class InMemoryDataService {
         }, {
                 id: 2,
                 name: 'FAC-2',
-                hexid: '64616e6765727a6f6e65',
+                hexid: '64:61:6e:67:65:72:7a:6f:6e:65',
                 base64id: 'NjQ2MTZlNjc2NTcyN2E2ZjZlNjU=',
                 authority: 'Facebook',
                 bugUrl: 'www.google.com',
@@ -21,7 +21,7 @@ export class InMemoryDataService {
             }, {
                 id: 3,
                 name: 'FAC-3',
-                hexid: '64616e6765727a6f6e65',
+                hexid: '64:61:6e:67:65:72:7a:6f:6e:65',
                 base64id: 'ZGFuZ2Vyem9uZQ==',
                 authority: 'Facebook',
                 bugUrl: 'www.google.com',
@@ -39,7 +39,7 @@ export class InMemoryDataService {
             }, {
                 id: 5,
                 name: 'INS-1',
-                hexid: '64616e6765727a6f6e65',
+                hexid: '64:61:6e:67:65:72:7a:6f:6e:65',
                 base64id: 'NjQ2MTZlNjc2NTcyN2E2ZjZlNjU=',
                 authority: 'Instagram',
                 bugUrl: 'www.google.com',

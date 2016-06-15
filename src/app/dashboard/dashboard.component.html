@@ -10,7 +10,7 @@
                 <h2 class="{{log.getStatusClass()}}"><md-icon>{{log.getIcon()}}</md-icon><span class="heading-content">{{log.name}}</span></h2>
               </md-card-title>
               <md-card-content>
-                <span>This Log has an issue.</span>
+                <span>{{log.getStatusMessage()}}</span>
               </md-card-content>
             </a>
           </div>

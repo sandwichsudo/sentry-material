@@ -1,20 +1,20 @@
-<div class="log-card-and-actions" *ngIf="log">
+<div class="log-card-and-actions log-detail-wrapper" *ngIf="log">
   <div class="log-card">
     <div class="log-container">
       <md-card-title>
         <h2 class="{{log.getStatusClass()}}"><md-icon>{{log.getIcon()}}</md-icon><span class="heading-content">{{log.name}}</span></h2>
       </md-card-title>
       <md-card-content>
-        <span>This Log has an issue.</span>
+        <span>{{log.getStatusMessage()}}</span>
         <div class="log-ids">
           <p>
             <button md-button title="copy to clipboard" class="copy-to-clipboard" aria-label="Copy to clipboard">
-              <md-icon>content_copy</md-icon><span class="with-icon">HexID:<span>{{log.hexid}}</span></span>
+              <md-icon>content_copy</md-icon><span class="with-icon">HexID <span>{{log.hexid}}</span></span>
             </button>
           </p>
           <p>
             <button md-button title="copy to clipboard" class="copy-to-clipboard" aria-label="Copy to clipboard">
-              <md-icon>content_copy</md-icon><span class="with-icon">Base64Id:<span>{{log.base64id}}</span></span>
+              <md-icon>content_copy</md-icon><span class="with-icon">Base64Id <span>{{log.base64id}}</span></span>
             </button>
           </p>
         </div>

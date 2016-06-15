@@ -1,4 +1,6 @@
 @import "./typography";
+@import "./colour-palette";
 body{
   margin:0 auto;
+  color:$primary-text-color;
 }
