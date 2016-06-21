@@ -3,7 +3,7 @@
   <ul class="logs">
     <li *ngFor="let log of logs" [class.selected]="log === selectedLog">
       <a  (click)="gotoDetail(log.id)" class="{{log.getStatusClass()}} log-list-item"><md-icon>{{log.getIcon()}}</md-icon>
-        <span class="heading-content with-icon">{{log.name}}</span>
+        <span class="heading-content with-icon">{{log.logUrl}}</span>
       </a>
     </li>
   </ul>

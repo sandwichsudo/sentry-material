@@ -2,7 +2,7 @@
   <div class="log-card">
     <div class="log-container">
       <md-card-title>
-        <h2 class="{{log.getStatusClass()}} md-headline"><md-icon>{{log.getIcon()}}</md-icon><span class="heading-content">{{log.name}}</span></h2>
+        <h2 class="{{log.getStatusClass()}} md-headline"><md-icon>{{log.getIcon()}}</md-icon><span class="heading-content">{{log.logUrl}}</span></h2>
         <div class="log-actions">
           <a href="{{log.bugUrl}}" class="log-action">
             <md-icon>bug_report</md-icon>
@@ -17,13 +17,13 @@
         <div class="log-ids">
           <p>
             <button md-button (click)= "copyToClipboard('hexid')" title="copy to clipboard" class="copy-to-clipboard" aria-label="Copy to clipboard">
-              <md-icon>content_copy</md-icon><span class="with-icon">HexID <span>{{log.hexid}}</span></span>
+              <md-icon>content_copy</md-icon><span class="with-icon"> Copy HexID</span>
             </button>
             <input value="{{log.hexid}}" class="copy-helper" name="hexid" type="text">
           </p>
           <p>
             <button md-button (click)= "copyToClipboard('base64id')" title="copy to clipboard" class="copy-to-clipboard" aria-label="Copy to clipboard">
-              <md-icon>content_copy</md-icon><span class="with-icon">Base64Id <span>{{log.base64id}}</span></span>
+              <md-icon>content_copy</md-icon><span class="with-icon"> Copy Base64Id</span>
             </button>
               <input value="{{log.base64id}}" class="copy-helper" name="base64id" type="text">
           </p>

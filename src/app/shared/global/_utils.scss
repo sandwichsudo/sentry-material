@@ -28,6 +28,9 @@ $side-margin-right: 2em;
   padding: 1em 4em 1em 1.5em;
   text-decoration: none;
   display: block;
+  text-overflow: ellipsis;
+white-space: nowrap;
+overflow: hidden;
   &.router-link-active {
     color: $accent-color;
   }
