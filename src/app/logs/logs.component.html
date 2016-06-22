@@ -1,5 +1,5 @@
 <div class="logs-wrapper">
-  <h2 class="md-title">My Logs</h2>
+  <h2 class="md-title light-header">My Logs</h2>
   <ul class="logs">
     <li *ngFor="let log of logs" [class.selected]="log === selectedLog">
       <a  (click)="gotoDetail(log.id)" class="{{log.getStatusClass()}} log-list-item"><md-icon>{{log.getIcon()}}</md-icon>

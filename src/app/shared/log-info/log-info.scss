@@ -17,6 +17,18 @@
       vertical-align: top;
     }
   }
+  &.error {
+      border-left:solid 5px $error-color;
+  }
+  &.warning {
+      border-left:solid 5px $warning-color;
+  }
+  &.info {
+      border-left:solid 5px $info-color;
+  }
+  &.working {
+      border-left:solid 5px $working-color;
+  }
 }
 .list {
   margin: 0;
@@ -27,7 +39,9 @@
   text-decoration: none;
   color: $primary-text-color;
   display: block;
-  padding: 1em 5.5em 1em 1em;
+  padding: 1em;
+  min-width:300px;
+  
 }
 .log-card-and-actions {
   position: relative;

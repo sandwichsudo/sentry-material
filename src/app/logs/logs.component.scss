@@ -7,8 +7,10 @@
   list-style-type: none;
   padding: 0;
   @extend %boxed-list;
+  max-width:500px;
 }
 .log-list-item{
+  background-color: $card-bg-color;
   md-icon{
     vertical-align: middle;
   }

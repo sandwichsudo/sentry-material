@@ -5,7 +5,10 @@
   margin:0;
   padding:0;
   list-style: none;
+  min-width:300px;
+  max-width:500px;
 }
+
 .log-container{
   &:hover {
     background-color: $card-hover;
@@ -16,4 +19,7 @@
 }
 .dashboard-wrap{
   margin: 0 $side-margin-right 0 $side-margin-left;
+}
+md-card-content{
+  margin-right: 7em;
 }

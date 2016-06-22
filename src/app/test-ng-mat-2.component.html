@@ -6,12 +6,11 @@
   </md-sidenav>
 
   <header class="app-header">
-    <button md-button class="app-icon-button" (click)="sidenav.toggle()">
-      <i class="material-icons app-toolbar-menu">menu</i>
-    </button>
+
     <div class="header-content">
-      <h1 class="md-display-1">{{title}}</h1>
-      <p class="md-subtitle">{{subtitle}}</p>
+      <h1 class="md-display-1">  <button md-button class="app-icon-button" (click)="sidenav.toggle()">
+          <i class="material-icons app-toolbar-menu">menu</i>
+        </button><span class="with-icon">{{title}}</span></h1>
     </div>
   </header>
 

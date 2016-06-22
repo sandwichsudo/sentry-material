@@ -1,13 +1,13 @@
 <div class="dashboard-wrap">
-  <h3 class="md-headline">Active Bugs:</h3>
+  <h3 class="md-headline light-header">Active Bugs:</h3>
   <ul class="list">
     <li *ngFor="let log of logs">
       <div class="log-card-and-actions">
         <md-card>
-          <div class="log-card">
+          <div class="{{log.getStatusClass()}} log-card">
             <a class="log-container" (click)="gotoDetail(log)">
               <md-card-title>
-                <h2 class="{{log.getStatusClass()}} md-title"><md-icon>{{log.getIcon()}}</md-icon><span class="heading-content">{{log.logUrl}}</span></h2>
+                <h2 class="md-title"><md-icon>{{log.getIcon()}}</md-icon><span class="heading-content">{{log.logUrl}}</span></h2>
               </md-card-title>
               <md-card-content>
                 <span>{{log.getStatusMessage()}}</span>

@@ -1,5 +1,8 @@
 @import '../global/colour-palette.scss';
 
+// breakpoints
+$mobile-max: 700px;
+
 $side-margin-left: 3.5em;
 $side-margin-right: 2em;
 .with-icon {
@@ -16,15 +19,23 @@ $side-margin-right: 2em;
   border:1px solid $list-box-color;
   li{
     border-bottom: 1px solid $list-box-color;
+    &:first-child{
+      a{
+        border-radius: 3px 3px 0 0;
+      }
+    }
     &:last-child{
       border-bottom:0;
+      a{
+        border-radius: 0 0 3px 3px;
+      }
     }
   }
 }
 %link-list-item {
   font-family: 'Roboto';
   color: $primary-text-color;
-  transition: background-color 1000ms linear;
+  transition: background-color 500ms linear;
   padding: 1em 4em 1em 1.5em;
   text-decoration: none;
   display: block;

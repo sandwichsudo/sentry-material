@@ -13,12 +13,14 @@
   margin: 0 $side-margin-right 0 $side-margin-left;
   .log-container {
     padding: 1em 0 0;
+
   }
 }
-md-card-title {
-  border: solid 1px $accent-color;
+md-card-title, md-card-content {
   display: block;
-  padding: 1em 1em 0;
+  padding: 1em;
+  background-color: $card-bg-color;
+  margin-bottom:1em;
 }
 .log-actions {
   bottom: auto;
