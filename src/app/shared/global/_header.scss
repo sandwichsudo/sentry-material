@@ -6,7 +6,7 @@
   box-shadow: 5px 1px 18px 10px #2e3f47;
   margin-bottom: 2em;
   .header-content {
-    margin: 0 $side-margin-right 0 $side-margin-left;
+    @include module-margin();
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -41,6 +41,9 @@ nav {
   .header-button-text {
     position: absolute;
     left: -999999px;
+  }
+  .nav-link{
+      min-width:50px;
   }
 }
 @media (min-width: $mobile-max) {

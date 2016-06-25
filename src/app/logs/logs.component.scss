@@ -1,7 +1,7 @@
 @import '../shared/global/messaging.scss';
 @import '../shared/global/utils.scss';
 .logs-wrapper{
-  margin: 0 $side-margin-right 0 $side-margin-left;
+    @include module-margin();
 }
 .logs {
   list-style-type: none;

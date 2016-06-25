@@ -18,5 +18,8 @@
   }
 }
 .dashboard-wrap{
-  margin: 0 $side-margin-right 0 $side-margin-left;
+    @include module-margin();
+}
+md-card-content {
+  margin-right: 7em;
 }
