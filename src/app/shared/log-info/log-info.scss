@@ -1,9 +1,22 @@
 @import '../global/colour-palette.scss';
 @import '../global/_utils.scss';
 .log-card {
+  font-family: 'Roboto';
+  md-card-content {
+    margin-right: 7em;
+  }
+  md-card-title {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .md-title {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
   padding: 0;
   background: none;
-  color:$primary-text-color;
+  color: $primary-text-color;
   h2 {
     margin-top: 0;
     md-icon {
@@ -18,16 +31,16 @@
     }
   }
   &.error {
-      border-left:solid 5px $error-color;
+    border-left: solid 5px $error-color;
   }
   &.warning {
-      border-left:solid 5px $warning-color;
+    border-left: solid 5px $warning-color;
   }
   &.info {
-      border-left:solid 5px $info-color;
+    border-left: solid 5px $info-color;
   }
   &.working {
-      border-left:solid 5px $working-color;
+    border-left: solid 5px $working-color;
   }
 }
 .list {
@@ -40,8 +53,7 @@
   color: $primary-text-color;
   display: block;
   padding: 1em;
-  min-width:300px;
-  
+  min-width: 300px;
 }
 .log-card-and-actions {
   position: relative;
@@ -56,23 +68,23 @@
   bottom: 10px;
   right: 10px;
   [md-fab] {
-    background-color: $accent-color;
+    background-color: $icon-color;
     margin-top: 0.5em;
   }
   .log-action {
     @extend %round-icon-button;
     background: none;
     border: none;
-    color: $secondary-text-color;
+    color: $icon-color;
     text-decoration: none;
     border-radius: 30px;
-    display:inline-block;
+    display: inline-block;
     .material-icons {
       font-size: 30px;
       height: 30px;
       width: 30px;
     }
-    &:hover{
+    &:hover {
       background-color: rgba(0, 0, 0, 0.12);
     }
   }

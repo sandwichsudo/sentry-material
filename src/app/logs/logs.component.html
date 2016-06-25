@@ -2,8 +2,12 @@
   <h2 class="md-title light-header">My Logs</h2>
   <ul class="logs">
     <li *ngFor="let log of logs" [class.selected]="log === selectedLog">
-      <a  (click)="gotoDetail(log.id)" class="{{log.getStatusClass()}} log-list-item"><md-icon>{{log.getIcon()}}</md-icon>
-        <span class="heading-content with-icon">{{log.logUrl}}</span>
+      <a (click)="gotoDetail(log.id)" class="{{log.getStatusClass()}} log-list-item">
+        <md-icon>{{log.getIcon()}}</md-icon>
+        <span class="with-icon log-heading">
+        <span class="sub-heading-content">{{log.name}}</span>
+        <span class="heading-content">{{log.logUrl}}</span>
+        </span>
       </a>
     </li>
   </ul>

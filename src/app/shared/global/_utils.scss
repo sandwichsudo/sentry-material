@@ -1,12 +1,13 @@
 @import '../global/colour-palette.scss';
 
 // breakpoints
-$mobile-max: 700px;
+$mobile-max: 480px;
 
 $side-margin-left: 3.5em;
 $side-margin-right: 2em;
 .with-icon {
   vertical-align: middle;
+  margin-left:5px;
 }
 %round-icon-button {
   border-radius: 30px;
@@ -52,4 +53,8 @@ overflow: hidden;
   &:active {
     color: $secondary-text-color;
   }
+}
+%vis-hide{
+    position:absolute;
+    left: -999999px;
 }

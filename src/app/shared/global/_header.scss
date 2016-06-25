@@ -4,49 +4,47 @@
   padding-bottom: 10px;
   padding-top: 10px;
   box-shadow: 5px 1px 18px 10px #2e3f47;
+  margin-bottom: 2em;
   .header-content {
     margin: 0 $side-margin-right 0 $side-margin-left;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
   h1 {
-    margin-bottom: 0;
+    margin: 0 2em 15px 0;
+    display: inline-block;
   }
   .md-subtitle {
     font-family: 'Roboto';
   }
-  .app-toolbar-menu,
   .md-subtitle,
   h1 {
     color: $primary-color-text;
   }
-  button {
-    @extend %round-icon-button;
-    i,
-    md-icon {
-      transition: all 200ms ease;
-      vertical-align: middle;
-    }
-    &:hover {
-      i,
-      md-icon {
-        transform: rotate(360deg);
-      }
-    }
-  }
 }
-md-sidenav {
-  nav {
-    margin-top: 3em;
-  }
+nav {
   a {
-    @extend %link-list-item;
     &.router-link-active {
+      i {
+        color: $accent-color;
+      }
       color: $accent-color;
     }
   }
-  .app-icon {
-    color: $primary-color-dark;
+}
+.app-toolbar-menu {
+  color: $icon-color;
+  vertical-align: middle;
+}
+@media (max-width: $mobile-max) {
+  .header-button-text {
+    position: absolute;
+    left: -999999px;
   }
-  &.md-sidenav-opened {
-    box-shadow: rgba(0, 0, 0, 0.5) 12px 0 19px !important;
+}
+@media (min-width: $mobile-max) {
+  .app-toolbar-menu {
+    margin-right: 5px;
   }
 }
