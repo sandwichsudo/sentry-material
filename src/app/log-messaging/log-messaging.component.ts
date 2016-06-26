@@ -9,7 +9,7 @@ import { NotificationService } from '../notification.service/notification.servic
 import {MD_CARD_DIRECTIVES} from '@angular2-material/card';
 import { MD_BUTTON_DIRECTIVES } from '@angular2-material/button';
 import {MdIcon, MdIconRegistry} from '@angular2-material/icon';
-import {MD_CHECKBOX_DIRECTIVES} from '@angular2-material/checkbox';
+import {MD_CHECKBOX_DIRECTIVES, MdCheckboxChange} from '@angular2-material/checkbox';
 import {MD_INPUT_DIRECTIVES} from '@angular2-material/input';
 
 @Component({
@@ -23,35 +23,53 @@ import {MD_INPUT_DIRECTIVES} from '@angular2-material/input';
 })
 export class LogMessagingComponent implements OnInit {
   log: Log;
-  emailTo: '';
+  emailTo: string;
   emailCC: string;
+  emailBody: string;
+  emailSubject: string;
+  canSend: boolean = true;
   public mailtoHref = ``;
+
   public contacts = [{
-    checked:'',
-    email:'email@email.com'
+    checked: new MdCheckboxChange(),
+    email:'email@email.com',
+    id:0
   },{
-    checked:'checked',
-    email:'email1@email.com'
+    checked:new MdCheckboxChange(),
+    email:'email1@email.com',
+    id:1
   },{
-    checked:'checked',
-    email:'email2@email.com'
+    checked:new MdCheckboxChange(),
+    email:'email2@email.com',
+    id:2
   }];
 
-  updateEmailTo($event) {
-    console.log($event);
-    this.setMailCC();
+  updateEmailTo($event, contact) {
+    this.setMailCC($event, contact);
+    this.setMailtoMessage();
   }
-  setMailCC() {
+  setMailCC($event, changedContact) {
     this.emailCC = "cc=";
+    let count = 0;
     for(let i=0; i<this.contacts.length; i++){
         let contact = this.contacts[i];
-        if(contact.checked){
+        if((contact.id == changedContact.id) && $event.checked){
             this.emailCC += `${contact.email}&`;
+            this.setEmailTo(contact.email);
+            count++;
+        } else if ((contact.id != changedContact.id) && contact.checked.checked){
+            this.emailCC += `${contact.email}&`;
+            this.setEmailTo(contact.email);
+            count++;
         }
     }
-    //remove final &
-    this.emailCC = this.emailCC.slice(0, -1);
-    console.log('set emailCC to', this.emailCC);
+    this.setButtonStatus(count>0);
+  }
+  setEmailTo(emailAddress){
+    this.emailTo=emailAddress;
+  }
+  setButtonStatus(isEnabled){
+    this.canSend = isEnabled;
   }
   constructor(
     private logService: LogService,
@@ -68,20 +86,18 @@ export class LogMessagingComponent implements OnInit {
     this.logService.getLog(id)
       .then(log => {
         this.log = new Log(log);
-        //this.setOperatorMessage();
-        //this.setMailtoMessage();
+        this.setOperatorMessage();
+        this.setMailtoMessage();
     });
   }
-  /*setOperatorMessage() {
-    this.email.body = `At timestamp ${new Date()}, ${this.log.name} experienced the following issue:
+  setOperatorMessage() {
+    this.emailBody = `At timestamp ${new Date()}, ${this.log.name} experienced the following issue:
 ${this.log.getStatusMessage()}.
 As stated by chrome policy, this will result in this log no longer being trusted.`;
-
+    this.emailSubject= encodeURIComponent(`${this.log.name}:${this.log.getStatusMessage()}.`);
   }
   setMailtoMessage(){
-    this.mailtoHref = `mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&subject=The%20subject%20of%20the%20email&body=${this.email.body}`;
+    this.mailtoHref = `mailto:${this.emailTo}?${this.emailCC}subject=${this.emailSubject}&body=${encodeURIComponent(this.emailBody)}`;
   }
-*/
-
 
 }
