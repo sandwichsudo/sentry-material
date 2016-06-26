@@ -53,16 +53,13 @@ export class LogMessagingComponent implements OnInit {
     let count = 0;
     for(let i=0; i<this.contacts.length; i++){
         let contact = this.contacts[i];
-        if((contact.id == changedContact.id) && $event.checked){
-            this.emailCC += `${contact.email}&`;
-            this.setEmailTo(contact.email);
-            count++;
-        } else if ((contact.id != changedContact.id) && contact.checked.checked){
-            this.emailCC += `${contact.email}&`;
+        if(((contact.id == changedContact.id) && $event.checked) || ((contact.id != changedContact.id) && contact.checked.checked)){
+            this.emailCC += `${contact.email},`;
             this.setEmailTo(contact.email);
             count++;
         }
     }
+    this.emailCC = this.emailCC.slice(0,-1);
     this.setButtonStatus(count>0);
   }
   setEmailTo(emailAddress){
@@ -97,7 +94,7 @@ As stated by chrome policy, this will result in this log no longer being trusted
     this.emailSubject= encodeURIComponent(`${this.log.name}:${this.log.getStatusMessage()}.`);
   }
   setMailtoMessage(){
-    this.mailtoHref = `mailto:${this.emailTo}?${this.emailCC}subject=${this.emailSubject}&body=${encodeURIComponent(this.emailBody)}`;
+    this.mailtoHref = `mailto:${this.emailTo}?${this.emailCC}&subject=${this.emailSubject}&body=${encodeURIComponent(this.emailBody)}`;
   }
 
 }
