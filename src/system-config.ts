@@ -20,7 +20,9 @@ const materialPkgs:string[] = [
   'button',
   'card',
   'icon',
-  'sidenav'
+  'sidenav',
+  'checkbox',
+  'input'
 ];
 
 materialPkgs.forEach((pkg) => {

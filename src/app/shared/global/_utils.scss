@@ -3,7 +3,7 @@ $mobile-max: 480px;
 $side-margin-left: 3.5em;
 $side-margin-left-mobile: 1.5em;
 $side-margin-right: 2em;
-
+$default-font-size: 16px;
 @mixin module-margin() {
    @media (max-width: $mobile-max){
     margin: 0 $side-margin-right 0 $side-margin-left-mobile;

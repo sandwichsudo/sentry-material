@@ -1,0 +1,33 @@
+<div *ngIf="log" class="log-messaging-wrap">
+  <h2 class="md-headline light-header">Notify {{log.operator}} about change of status of {{log.name}}.</h2>
+  <md-card>
+    <p>{{log.getStatusMessage()}}</p>
+    <form>
+      <fieldset>
+        <legend>
+          Choose which addresses to notify
+        </legend>
+        <div *ngFor="let contact of contacts">
+          <md-checkbox ngControl="contact" (ngModelChange)='updateEmailTo($event)' [(ngModel)]="contact['checked']">{{contact.email}}</md-checkbox>
+        </div>
+        <div *ngFor="let contact of contacts">
+          <p *ngIf="contact['checked'].checked">{{contact.email}} is checked</p>
+        </div>
+      </fieldset>
+
+
+      <div class="message-input-wrap">
+        <label for="message">Message to operator</label>
+        <textarea id="message" type="textarea" [(ngModel)]='emailBody'>{{operatorMessage}}</textarea>
+      </div>
+      <h2>{{emailBody}}</h2>
+      <h2>{{emailTo}}</h2>
+      <h2>{{emailCC}}</h2>
+
+      <div class="button-container">
+        <a md-raised-button (click)="goToDetail(log)">Back to log</a>
+        <a md-raised-button color="primary">Create email</a>
+      </div>
+    </form>
+  </md-card>
+</div>
