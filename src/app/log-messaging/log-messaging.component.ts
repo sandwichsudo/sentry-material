@@ -24,7 +24,6 @@ import {MD_INPUT_DIRECTIVES} from '@angular2-material/input';
 export class LogMessagingComponent implements OnInit {
   log: Log;
   emailTo: string;
-  emailCC: string;
   emailBody: string;
   emailSubject: string;
   canSend: boolean = true;
@@ -49,21 +48,17 @@ export class LogMessagingComponent implements OnInit {
     this.setMailtoMessage();
   }
   setMailCC($event, changedContact) {
-    this.emailCC = "cc=";
-    let count = 0;
+    this.emailTo='';
+    let count =0;
     for(let i=0; i<this.contacts.length; i++){
         let contact = this.contacts[i];
         if(((contact.id == changedContact.id) && $event.checked) || ((contact.id != changedContact.id) && contact.checked.checked)){
-            this.emailCC += `${contact.email},`;
-            this.setEmailTo(contact.email);
+            this.emailTo += `${contact.email},`;
             count++;
         }
     }
-    this.emailCC = this.emailCC.slice(0,-1);
+    this.emailTo = this.emailTo.slice(0,-1);
     this.setButtonStatus(count>0);
-  }
-  setEmailTo(emailAddress){
-    this.emailTo=emailAddress;
   }
   setButtonStatus(isEnabled){
     this.canSend = isEnabled;
@@ -94,7 +89,7 @@ As stated by chrome policy, this will result in this log no longer being trusted
     this.emailSubject= encodeURIComponent(`${this.log.name}:${this.log.getStatusMessage()}.`);
   }
   setMailtoMessage(){
-    this.mailtoHref = `mailto:${this.emailTo}?${this.emailCC}&subject=${this.emailSubject}&body=${encodeURIComponent(this.emailBody)}`;
+    this.mailtoHref = `mailto:${this.emailTo}?subject=${this.emailSubject}&body=${encodeURIComponent(this.emailBody)}`;
   }
 
 }

@@ -32,7 +32,7 @@
       <a href="{{log.bugUrl}}" class="log-action">
         <md-icon>bug_report</md-icon>
       </a>
-      <button md-button href="#" class="log-action">
+      <button md-button (click)="goToNotify(log)" class="log-action">
         <md-icon>email</md-icon>
       </button>
     </div>

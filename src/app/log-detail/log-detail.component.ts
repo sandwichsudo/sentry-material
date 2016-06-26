@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RouteParams } from '@angular/router-deprecated';
+import { Router } from '@angular/router-deprecated';
 
 import { Log } from '../log/log';
 import { LogService } from '../log.service/log.service';
@@ -25,6 +26,7 @@ export class LogDetailComponent implements OnInit {
   constructor(
     private logService: LogService,
     private routeParams: RouteParams,
+    private router: Router, 
     private notificationService: NotificationService) {
     this.notificationService = notificationService;
   }
@@ -40,7 +42,10 @@ export class LogDetailComponent implements OnInit {
   goBack() {
     window.history.back();
   }
-
+  goToNotify(log: Log) {
+    let link = ['LogMessaging', { id: log.id }];
+    this.router.navigate(link);
+  }
   copyToClipboard(idType: string) {
     let clipboardInfo = "";
     if (idType == 'base64id') {
