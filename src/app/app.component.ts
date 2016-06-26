@@ -10,6 +10,7 @@ import {MD_SIDENAV_DIRECTIVES} from '@angular2-material/sidenav';
 import { MD_BUTTON_DIRECTIVES } from '@angular2-material/button';
 import {MdIcon, MdIconRegistry} from '@angular2-material/icon';
 import { MessageComponent } from './message/message.component';
+import { LogMessagingComponent } from './log-messaging/log-messaging.component';
 
 @Component({
   moduleId: module.id,
@@ -37,10 +38,13 @@ import { MessageComponent } from './message/message.component';
     path: '/detail/:id',
     name: 'LogDetail',
     component: LogDetailComponent
+  }, {
+    path: '/notify/:id',
+    name: 'LogMessaging',
+    component: LogMessagingComponent
   }
 ])
 
 export class TestNgMat2AppComponent {
   title = 'Sentry';
-  subtitle = 'Certificate transparency log monitoring app.';
 }

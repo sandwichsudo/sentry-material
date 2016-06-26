@@ -5,7 +5,7 @@
       <div class="log-card-and-actions">
         <md-card>
           <div class="{{log.getStatusClass()}} log-card">
-            <a class="log-container" (click)="gotoDetail(log)">
+            <a class="log-container" (click)="goToDetail(log)">
               <md-card-title>
                 <h2 class="md-title"><md-icon>{{log.getIcon()}}</md-icon><span class="heading-content">{{log.logUrl}}</span></h2>
               </md-card-title>
@@ -19,7 +19,7 @@
           <a href="{{log.bugUrl}}" class="log-action">
             <md-icon>bug_report</md-icon>
           </a>
-          <button md-button href="#" class="log-action">
+          <button md-button (click)="goToNotify(log)" class="log-action">
             <md-icon>email</md-icon>
           </button>
         </div>

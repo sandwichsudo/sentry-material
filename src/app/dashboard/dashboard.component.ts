@@ -43,8 +43,12 @@ export class DashboardComponent implements OnInit {
         this.logs.sort(this.comparePriority);
       });
   }
-  gotoDetail(log: Log) {
+  goToDetail(log: Log) {
     let link = ['LogDetail', { id: log.id }];
+    this.router.navigate(link);
+  }
+  goToNotify(log: Log) {
+    let link = ['LogMessaging', { id: log.id }];
     this.router.navigate(link);
   }
 
