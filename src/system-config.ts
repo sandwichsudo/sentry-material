@@ -4,14 +4,17 @@
 /** Map relative paths to URLs. */
 const map: any = {
   '@angular2-material': 'vendor/@angular2-material',
-  'angular2-in-memory-web-api': 'vendor/angular2-in-memory-web-api'
+  'angular2-in-memory-web-api': 'vendor/angular2-in-memory-web-api',
+  'ng2-charts': 'vendor/ng2-charts',
+  'chart.js': 'vendor/chart.js'
 };
 
 /** User packages configuration. */
 const packages: any = {
     'rxjs': { defaultExtension: 'js' },
     'angular2-in-memory-web-api': { main:'index.js', defaultExtension: 'js' },
-    '@angular/router-deprecated': { main:'index.js', defaultExtension: 'js' }
+    '@angular/router-deprecated': { main:'index.js', defaultExtension: 'js' },
+    'ng2-charts': { main:'ng2-charts.js', defaultExtension: 'js' }
 };
 
 // put the names of any of your Material components here

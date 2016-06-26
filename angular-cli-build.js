@@ -13,7 +13,9 @@ module.exports = function(defaults) {
       'rxjs/**/*.+(js|js.map)',
       '@angular/**/*.+(js|js.map)',
       '@angular2-material/**/*',
-      'angular2-in-memory-web-api/**/*'
+      'angular2-in-memory-web-api/**/*',
+      'chart.js/dist/*',
+      'ng2-charts/**/*'
     ]
   });
 };
