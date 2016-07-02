@@ -1,24 +1,31 @@
-import {Component} from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 import {CORE_DIRECTIVES, FORM_DIRECTIVES, NgClass} from '@angular/common';
-
+import { LogService } from '../log.service/log.service';
 import {CHART_DIRECTIVES} from 'ng2-charts/ng2-charts';
+import { Log } from '../log/log';
 
 @Component({
   selector: 'line-chart-demo',
   templateUrl: './app/graph/graph.html',
   styleUrls: ['./app/graph/graph.css'],
-  directives: [CHART_DIRECTIVES, NgClass, CORE_DIRECTIVES, FORM_DIRECTIVES]
+  directives: [CHART_DIRECTIVES, NgClass, CORE_DIRECTIVES, FORM_DIRECTIVES],
+  providers: [LogService],
+  inputs:['log']
 })
-export class LineChartDemoComponent {
+export class LineChartDemoComponent implements OnInit{
+
+    @Input() log;
+
   // lineChart
-  public lineChartData:Array<any> = [
-    {data: [99.4, 99.6, 99.5, 99.5, 99.4, 99.3, 99.2], label: 'Series A'}
-  ];
-  public lineChartLabels:Array<any> = ['13:51', '13:52', '13:53', '13:54', '13:55', '13:56', '13:57'];
+  public lineChartData;
+  public lineChartLabels;
   public lineChartOptions:any = {
     animation: false,
     responsive: true
   };
+  public graph;
+  constructor(private logService: LogService){}
+
   public lineChartColours:Array<any> = [
     {
       backgroundColor: 'rgba(0,0,0,0)',
@@ -40,5 +47,14 @@ export class LineChartDemoComponent {
 
   public chartHovered(e:any):void {
     console.log(e);
+  }
+
+  ngOnInit() {
+    this.logService.getGraphs()
+    .then(graphs => {
+      this.graph = graphs[this.log.id];
+      this.lineChartData = this.graph.availibility;
+      this.lineChartLabels = this.graph.time;
+    });
   }
 }

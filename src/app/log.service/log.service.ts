@@ -8,6 +8,7 @@ import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class LogService {
   private logsUrl = 'app/logs';  // URL to web api
+  private graphsUrl = 'app/graphs';
 
   constructor(private http: Http) { }
 
@@ -22,6 +23,15 @@ export class LogService {
       .then(response => response.json().data)
       .catch(this.handleError);
   }
+
+  getGraphs(): Promise<Number[]> {
+    return this.http.get(this.graphsUrl)
+      .toPromise()
+      .then(response => {
+      return response.json().data;})
+      .catch(this.handleError);
+  }
+
   getLog(id: number) {
     return this.getLogs()
       .then(logs => logs.filter(log => log.id === id)[0]);
