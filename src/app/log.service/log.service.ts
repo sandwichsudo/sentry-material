@@ -8,7 +8,8 @@ import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class LogService {
   private logsUrl = 'app/logs';  // URL to web api
-  private graphsUrl = 'app/graphs';
+  private availibilityGraphsUrl = 'app/availibilityGraphs';
+  private mmdGraphsUrl = 'app/mmdGraphs';
 
   constructor(private http: Http) { }
 
@@ -24,8 +25,15 @@ export class LogService {
       .catch(this.handleError);
   }
 
-  getGraphs(): Promise<Number[]> {
-    return this.http.get(this.graphsUrl)
+  getAvailibilityGraphs(): Promise<Number[]> {
+    return this.http.get(this.availibilityGraphsUrl)
+      .toPromise()
+      .then(response => {
+      return response.json().data;})
+      .catch(this.handleError);
+  }
+  getMMDGraphs(): Promise<Number[]> {
+    return this.http.get(this.mmdGraphsUrl)
       .toPromise()
       .then(response => {
       return response.json().data;})

@@ -1,6 +1,38 @@
 export class InMemoryDataService {
   createDb() {
-    let graphs = [
+    let mmdGraphs =[
+    {
+        mmd:[
+        { data: [2, 2, 3, 2, 2, 2, 2], label: 'FAC-1 MMD' },
+        { data: [24, 24, 24, 24, 24, 24, 24], label: '' }],
+        time:['1/1/16', '2/1/16', '3/1/16', '4/1/16', '5/1/16', '6/1/16', '7/1/16']
+    },
+    {
+        mmd:[
+        { data: [2, 2, 3, 2, 2, 2, 2], label: 'FAC-2 MMD' },
+        { data: [24, 24, 24, 24, 24, 24, 24], label: '' }],
+        time:['1/1/16', '2/1/16', '3/1/16', '4/1/16', '5/1/16', '6/1/16', '7/1/16']
+    },
+    {
+        mmd:[
+        { data: [2, 2, 3, 2, 2, 2, 2], label: 'FAC-3 MMD' },
+        { data: [24, 24, 24, 24, 24, 24, 24], label: '' }],
+        time:['1/1/16', '2/1/16', '3/1/16', '4/1/16', '5/1/16', '6/1/16', '7/1/16']
+    },
+    {
+        mmd:[
+        { data: [2, 2, 3, 2, 2, 2, 2], label: 'TW-1 MMD' },
+        { data: [24, 24, 24, 24, 24, 24, 24], label: '' }],
+        time:['1/1/16', '2/1/16', '3/1/16', '4/1/16', '5/1/16', '6/1/16', '7/1/16']
+    },
+    {
+        mmd:[
+        { data: [2, 2, 3, 2, 2, 2, 2], label: 'INS-1 MMD' },
+        { data: [24, 24, 24, 24, 24, 24, 24], label: '' }],
+        time:['1/1/16', '2/1/16', '3/1/16', '4/1/16', '5/1/16', '6/1/16', '7/1/16']
+    }
+    ];
+    let availibilityGraphs = [
     {
         availibility:[
         { data: [99.4, 99.6, 99.5, 99.5, 99.4, 99.3, 99.2], label: 'FAC-1 availibility' },
@@ -105,6 +137,6 @@ export class InMemoryDataService {
         contactDetails: ['ins1@fail.com', 'aguy@instagram.com', 'a.n.otherguy@instagram.com']
       }]
       ;
-    return { logs, graphs };
+    return { logs, availibilityGraphs, mmdGraphs };
   }
 }

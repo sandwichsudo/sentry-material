@@ -50,7 +50,7 @@ export class LineChartDemoComponent implements OnInit{
   }
 
   ngOnInit() {
-    this.logService.getGraphs()
+    this.logService.getAvailibilityGraphs()
     .then(graphs => {
       this.graph = graphs[this.log.id];
       this.lineChartData = this.graph.availibility;
