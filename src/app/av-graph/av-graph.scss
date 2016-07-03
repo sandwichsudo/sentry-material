@@ -1,0 +1,6 @@
+@import '../shared/global/utils.scss';
+.chart {
+  display: block;
+  @include module-margin();
+  margin-top:2em;
+}

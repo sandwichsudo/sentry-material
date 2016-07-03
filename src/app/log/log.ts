@@ -23,6 +23,9 @@ export class Log extends Status{
       case 2:
         messageText = 'This log has breached availability requirements.';
         break;
+      case 3:
+          messageText = 'This log has breached minimum merge delay requirements.';
+          break;
       default:
         messageText = 'This log is working normally.';
     }

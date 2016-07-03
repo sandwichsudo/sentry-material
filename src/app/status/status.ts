@@ -20,6 +20,9 @@ export class Status {
       case 2:
         statusClass = 'error';
         break;
+      case 3:
+          statusClass = 'error';
+          break;
       default:
         statusClass = 'working';
     }
@@ -37,6 +40,9 @@ export class Status {
       case 2:
         iconText = 'error';
         break;
+      case 3:
+          iconText = 'error';
+          break;
       default:
         iconText = 'check_circle';
     }

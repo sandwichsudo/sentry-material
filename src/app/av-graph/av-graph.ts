@@ -5,14 +5,14 @@ import {CHART_DIRECTIVES} from 'ng2-charts/ng2-charts';
 import { Log } from '../log/log';
 
 @Component({
-  selector: 'line-chart-demo',
-  templateUrl: './app/graph/graph.html',
-  styleUrls: ['./app/graph/graph.css'],
+  selector: 'av-graph',
+  templateUrl: './app/av-graph/av-graph.html',
+  styleUrls: ['./app/av-graph/av-graph.css'],
   directives: [CHART_DIRECTIVES, NgClass, CORE_DIRECTIVES, FORM_DIRECTIVES],
   providers: [LogService],
   inputs:['log']
 })
-export class LineChartDemoComponent implements OnInit{
+export class AvailibilityGraph implements OnInit{
 
     @Input() log;
 

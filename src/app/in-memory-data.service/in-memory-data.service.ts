@@ -30,6 +30,12 @@ export class InMemoryDataService {
         { data: [2, 2, 3, 2, 2, 2, 2], label: 'INS-1 MMD' },
         { data: [24, 24, 24, 24, 24, 24, 24], label: '' }],
         time:['1/1/16', '2/1/16', '3/1/16', '4/1/16', '5/1/16', '6/1/16', '7/1/16']
+    },
+    {
+        mmd:[
+        { data: [2, 2, 6, 26, 2, 2, 2], label: 'INS-2 MMD' },
+        { data: [24, 24, 24, 24, 24, 24, 24], label: '' }],
+        time:['1/1/16', '2/1/16', '3/1/16', '4/1/16', '5/1/16', '6/1/16', '7/1/16']
     }
     ];
     let availibilityGraphs = [
@@ -63,6 +69,12 @@ export class InMemoryDataService {
         { data: [99, 99, 99, 99, 99, 99, 99], label: '' }],
         time:['13:51', '13:52', '13:53', '13:54', '13:55', '13:56', '13:57']
     },
+    {
+        availibility:[
+        { data: [99.4, 99.6, 99.5, 99.5, 99.5, 99.6, 99.6], label: 'INS-2 availibility' },
+        { data: [99, 99, 99, 99, 99, 99, 99], label: '' }],
+        time:['13:51', '13:52', '13:53', '13:54', '13:55', '13:56', '13:57']
+    }
 
     ];
     let logs = [{
@@ -135,6 +147,20 @@ export class InMemoryDataService {
         https: 'yes',
         priority: -1,
         contactDetails: ['ins1@fail.com', 'aguy@instagram.com', 'a.n.otherguy@instagram.com']
+      }, {
+        id: 5,
+        name: 'INS-2',
+        logUrl: 'ct.googleapis.com/homeland',
+        hexid: '64:61:6e:67:65:72:7a:6f:6e:65',
+        base64id: 'NjQ2MTZlNjc2NTcyN2E2ZjZlNjU=',
+        operator: 'Instagram',
+        bugUrl: 'http://www.google.com',
+        started: '12/1/16',
+        cis: 'Included',
+        mmd: '24 hours',
+        https: 'yes',
+        priority: 3,
+        contactDetails: ['ins2@fail.com', 'aguy@instagram.com', 'a.n.otherguy@instagram.com']
       }]
       ;
     return { logs, availibilityGraphs, mmdGraphs };

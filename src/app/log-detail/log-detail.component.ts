@@ -12,13 +12,13 @@ import { MD_BUTTON_DIRECTIVES } from '@angular2-material/button';
 import {MdIcon, MdIconRegistry} from '@angular2-material/icon';
 
 //chart
- import {LineChartDemoComponent} from '../graph/graph';
-
+ import {AvailibilityGraph} from '../av-graph/av-graph';
+import {MMDGraph} from '../mmd-graph/mmd-graph';
 @Component({
   selector: 'my-log-detail',
   styleUrls: ['./app/log-detail/log-detail.component.css'],
   templateUrl: './app/log-detail/log-detail.component.html',
-  directives: [MD_CARD_DIRECTIVES, MD_BUTTON_DIRECTIVES, MdIcon, LineChartDemoComponent],
+  directives: [MD_CARD_DIRECTIVES, MD_BUTTON_DIRECTIVES, MdIcon, AvailibilityGraph, MMDGraph],
   providers: [MdIconRegistry,
     LogService]
 
@@ -29,7 +29,7 @@ export class LogDetailComponent implements OnInit {
   constructor(
     private logService: LogService,
     private routeParams: RouteParams,
-    private router: Router, 
+    private router: Router,
     private notificationService: NotificationService) {
     this.notificationService = notificationService;
   }
