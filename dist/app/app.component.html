@@ -1,0 +1,12 @@
+
+  <header class="app-header">
+
+    <div class="header-content">
+      <h1 class="md-display-1"><span class="with-icon">{{title}}</span></h1>
+        <nav><a md-raised-button class="nav-link" [routerLink]="['Dashboard']"><i class="material-icons app-toolbar-menu">dashboard</i><span class="with-icon header-button-text">Dashboard</span></a>
+          <a  md-raised-button class="nav-link" [routerLink]="['Logs']"><i class="material-icons app-toolbar-menu">list</i><span class="with-icon header-button-text">Logs</span></a></nav>
+    </div>
+  </header>
+
+  <router-outlet></router-outlet>
+  <message-container></message-container>

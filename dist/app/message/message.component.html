@@ -1,0 +1,3 @@
+<div *ngIf="notification">
+  <span class="{{notification.getStatusClass()}} md-subhead message-container"><md-icon>{{notification.getIcon()}}</md-icon><span class="content with-icon">{{notification.message}}</span></span>
+</div>

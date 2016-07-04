@@ -1,0 +1,152 @@
+.with-icon {
+  vertical-align: middle;
+  margin-left: 5px; }
+
+.log-actions .log-action {
+  border-radius: 30px;
+  padding: 5px;
+  min-width: 30px;
+  min-height: 30px;
+  line-height: 16px; }
+
+.log-card {
+  font-family: 'Roboto';
+  padding: 0;
+  background: none;
+  color: #212121; }
+  .log-card md-card-title {
+    margin-bottom: 0;
+    padding-bottom: 0; }
+  .log-card .md-title {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden; }
+  .log-card h2 {
+    margin-top: 0; }
+    .log-card h2 md-icon {
+      font-size: inherit; }
+    .log-card h2 .heading-content {
+      margin-left: 0.5em; }
+    .log-card h2 .heading-content,
+    .log-card h2 md-icon {
+      vertical-align: top; }
+  .log-card.error {
+    border-left: solid 5px #db2721; }
+  .log-card.warning {
+    border-left: solid 5px #ce872a; }
+  .log-card.info {
+    border-left: solid 5px #0089ff; }
+  .log-card.working {
+    border-left: solid 5px #0bbc87; }
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.log-container {
+  text-decoration: none;
+  color: #212121;
+  display: block;
+  padding: 1em;
+  min-width: 300px; }
+
+.log-card-and-actions {
+  position: relative;
+  margin-bottom: 1em; }
+  .log-card-and-actions md-card {
+    padding: 0; }
+
+.log-actions {
+  width: 100px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px; }
+  .log-actions [md-fab] {
+    background-color: #727272;
+    margin-top: 0.5em; }
+  .log-actions .log-action {
+    background: none;
+    border: none;
+    color: #727272;
+    text-decoration: none;
+    border-radius: 30px;
+    display: inline-block; }
+    .log-actions .log-action .material-icons {
+      font-size: 30px;
+      height: 30px;
+      width: 30px; }
+    .log-actions .log-action:hover {
+      background-color: rgba(0, 0, 0, 0.12); }
+
+.error md-icon {
+  color: #db2721; }
+
+.warning md-icon {
+  color: #ce872a; }
+
+.info md-icon {
+  color: #0089ff; }
+
+.working md-icon {
+  color: #0bbc87; }
+
+.message-container {
+  padding: 10px 10px 10px 18px;
+  display: block;
+  margin: 0 20px;
+  position: fixed;
+  top: 10px;
+  width: 84%;
+  border-radius: 3px;
+  transition: all 200ms ease; }
+  .message-container .content,
+  .message-container md-icon {
+    color: white;
+    margin-right: 5px;
+    vertical-align: middle; }
+  .message-container.error {
+    background-color: #db2721; }
+  .message-container.warning {
+    background-color: #ce872a; }
+  .message-container.info {
+    background-color: #0089ff; }
+  .message-container.working {
+    background-color: #0bbc87; }
+
+.with-icon {
+  vertical-align: middle;
+  margin-left: 5px; }
+
+.log-actions .log-action {
+  border-radius: 30px;
+  padding: 5px;
+  min-width: 30px;
+  min-height: 30px;
+  line-height: 16px; }
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  min-width: 300px;
+  max-width: 500px; }
+
+.log-container:hover {
+  background-color: #CFD8DC; }
+
+.log-container:active, .log-container:focus {
+  border: solid #B6B6B6 1px; }
+
+@media (max-width: 480px) {
+  .dashboard-wrap {
+    margin-right: 2em;
+    margin-left: 1.5em; } }
+
+@media (min-width: 480px) {
+  .dashboard-wrap {
+    margin-right: 2em;
+    margin-left: 1.5em; } }
+
+md-card-content {
+  margin-right: 7em; }

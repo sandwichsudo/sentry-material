@@ -1,0 +1,94 @@
+.error md-icon {
+  color: #db2721; }
+
+.warning md-icon {
+  color: #ce872a; }
+
+.info md-icon {
+  color: #0089ff; }
+
+.working md-icon {
+  color: #0bbc87; }
+
+.message-container {
+  padding: 10px 10px 10px 18px;
+  display: block;
+  margin: 0 20px;
+  position: fixed;
+  top: 10px;
+  width: 84%;
+  border-radius: 3px;
+  transition: all 200ms ease; }
+  .message-container .content,
+  .message-container md-icon {
+    color: white;
+    margin-right: 5px;
+    vertical-align: middle; }
+  .message-container.error {
+    background-color: #db2721; }
+  .message-container.warning {
+    background-color: #ce872a; }
+  .message-container.info {
+    background-color: #0089ff; }
+  .message-container.working {
+    background-color: #0bbc87; }
+
+.with-icon {
+  vertical-align: middle;
+  margin-left: 5px; }
+
+.logs {
+  border: 1px solid rgba(0, 0, 0, 0.12); }
+  .logs li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
+    .logs li:first-child a {
+      border-radius: 3px 3px 0 0; }
+    .logs li:last-child {
+      border-bottom: 0; }
+      .logs li:last-child a {
+        border-radius: 0 0 3px 3px; }
+
+.log-list-item {
+  font-family: 'Roboto';
+  color: #212121;
+  transition: background-color 500ms linear;
+  padding: 1em 4em 1em 1.5em;
+  text-decoration: none;
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; }
+  .router-link-active.log-list-item {
+    color: #009688; }
+  .log-list-item:hover {
+    background-color: #CFD8DC;
+    color: #303F9F; }
+  .log-list-item:active {
+    color: #727272; }
+
+@media (max-width: 480px) {
+  .logs-wrapper {
+    margin-right: 2em;
+    margin-left: 1.5em; } }
+
+@media (min-width: 480px) {
+  .logs-wrapper {
+    margin-right: 2em;
+    margin-left: 1.5em; } }
+
+.logs {
+  list-style-type: none;
+  padding: 0;
+  max-width: 500px; }
+
+.log-list-item {
+  background-color: white;
+  padding-right: 1em; }
+  .log-list-item md-icon {
+    vertical-align: middle; }
+
+.sub-heading-content {
+  display: block; }
+
+.log-heading {
+  display: inline-block; }
