@@ -282,4 +282,4 @@ var BasicTestApp = (function () {
     ], BasicTestApp);
     return BasicTestApp;
 }());
-//# sourceMappingURL=/usr/local/google/home/jelbourn/material2/tmp/broccoli_type_script_compiler-input_base_path-OxHzApZr.tmp/0/components/sidenav/sidenav.spec.js.map
+//# sourceMappingURL=sidenav.spec.js.map

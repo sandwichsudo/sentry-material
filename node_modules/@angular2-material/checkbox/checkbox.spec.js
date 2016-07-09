@@ -140,6 +140,20 @@ describe('MdCheckbox', function () {
             fixture.detectChanges();
             expect(checkboxNativeElement.classList).toContain('md-checkbox-align-end');
         });
+        testing_1.it('should not trigger the click event multiple times', function () {
+            // By default, when clicking on a label element, a generated click will be dispatched
+            // on the associated input element.
+            // Since we're using a label element and a visual hidden input, this behavior can led
+            // to an issue, where the click events on the checkbox are getting executed twice.
+            spyOn(testComponent, 'onCheckboxClick');
+            expect(inputElement.checked).toBe(false);
+            expect(checkboxNativeElement.classList).not.toContain('md-checkbox-checked');
+            labelElement.click();
+            fixture.detectChanges();
+            expect(checkboxNativeElement.classList).toContain('md-checkbox-checked');
+            expect(inputElement.checked).toBe(true);
+            expect(testComponent.onCheckboxClick).toHaveBeenCalledTimes(1);
+        });
         testing_1.it('should emit a change event when the `checked` value changes', function () {
             // TODO(jelbourn): this *should* work with async(), but fixture.whenStable currently doesn't
             // know to look at pending macro tasks.
@@ -365,10 +379,11 @@ var SingleCheckbox = (function () {
         this.parentElementKeyedUp = false;
         this.lastKeydownEvent = null;
     }
+    SingleCheckbox.prototype.onCheckboxClick = function (event) { };
     SingleCheckbox = __decorate([
         core_1.Component({
             directives: [checkbox_1.MdCheckbox],
-            template: "\n  <div (click)=\"parentElementClicked = true\" (keyup)=\"parentElementKeyedUp = true\">    \n    <md-checkbox \n        id=\"simple-check\"\n        [align]=\"alignment\"\n        [checked]=\"isChecked\" \n        [indeterminate]=\"isIndeterminate\" \n        [disabled]=\"isDisabled\"\n        (change)=\"changeCount = changeCount + 1\">\n      Simple checkbox\n    </md-checkbox>\n  </div>"
+            template: "\n  <div (click)=\"parentElementClicked = true\" (keyup)=\"parentElementKeyedUp = true\">    \n    <md-checkbox \n        id=\"simple-check\"\n        [align]=\"alignment\"\n        [checked]=\"isChecked\" \n        [indeterminate]=\"isIndeterminate\" \n        [disabled]=\"isDisabled\"\n        (change)=\"changeCount = changeCount + 1\"\n        (click)=\"onCheckboxClick($event)\">\n      Simple checkbox\n    </md-checkbox>\n  </div>"
         }), 
         __metadata('design:paramtypes', [])
     ], SingleCheckbox);
@@ -468,4 +483,4 @@ var CheckboxWithChangeEvent = (function () {
     ], CheckboxWithChangeEvent);
     return CheckboxWithChangeEvent;
 }());
-//# sourceMappingURL=/usr/local/google/home/jelbourn/material2/tmp/broccoli_type_script_compiler-input_base_path-OxHzApZr.tmp/0/components/checkbox/checkbox.spec.js.map
+//# sourceMappingURL=checkbox.spec.js.map

@@ -74,4 +74,4 @@ testing_1.describe('GlobalPositonStrategy', function () {
 function fakeAsyncTest(fn) {
     return testing_1.inject([], testing_1.fakeAsync(fn));
 }
-//# sourceMappingURL=/usr/local/google/home/jelbourn/material2/tmp/broccoli_type_script_compiler-input_base_path-OxHzApZr.tmp/0/core/overlay/position/global-position-strategy.spec.js.map
+//# sourceMappingURL=global-position-strategy.spec.js.map

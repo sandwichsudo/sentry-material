@@ -1,41 +1,50 @@
 {
   "_args": [
     [
-      "@angular2-material/input",
+      {
+        "raw": "@angular2-material/input@^2.0.0-alpha.5-2",
+        "scope": "@angular2-material",
+        "escapedName": "@angular2-material%2finput",
+        "name": "@angular2-material/input",
+        "rawSpec": "^2.0.0-alpha.5-2",
+        "spec": ">=2.0.0-alpha.5-2 <3.0.0",
+        "type": "range"
+      },
       "/Users/amesg/repos/sentry-material"
     ]
   ],
-  "_from": "@angular2-material/input@latest",
-  "_id": "@angular2-material/input@2.0.0-alpha.5-2",
+  "_from": "@angular2-material/input@>=2.0.0-alpha.5-2 <3.0.0",
+  "_id": "@angular2-material/input@2.0.0-alpha.5-3",
   "_inCache": true,
   "_installable": true,
   "_location": "/@angular2-material/input",
-  "_nodeVersion": "5.7.0",
+  "_nodeVersion": "4.1.2",
   "_npmOperationalInternal": {
-    "host": "packages-12-west.internal.npmjs.com",
-    "tmp": "tmp/input-2.0.0-alpha.5-2.tgz_1464814645521_0.30344088934361935"
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/input-2.0.0-alpha.5-3.tgz_1467296850338_0.08857640181668103"
   },
   "_npmUser": {
-    "email": "angular-core+npm@google.com",
-    "name": "angular2-material"
+    "name": "angular2-material",
+    "email": "angular-core+npm@google.com"
   },
-  "_npmVersion": "3.7.5",
+  "_npmVersion": "3.8.7",
   "_phantomChildren": {},
   "_requested": {
-    "name": "@angular2-material/input",
-    "raw": "@angular2-material/input",
-    "rawSpec": "",
+    "raw": "@angular2-material/input@^2.0.0-alpha.5-2",
     "scope": "@angular2-material",
-    "spec": "latest",
-    "type": "tag"
+    "escapedName": "@angular2-material%2finput",
+    "name": "@angular2-material/input",
+    "rawSpec": "^2.0.0-alpha.5-2",
+    "spec": ">=2.0.0-alpha.5-2 <3.0.0",
+    "type": "range"
   },
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/@angular2-material/input/-/input-2.0.0-alpha.5-2.tgz",
-  "_shasum": "c6bc3a88a44c22f36bc9638a4a1da58818fe57cf",
+  "_resolved": "https://registry.npmjs.org/@angular2-material/input/-/input-2.0.0-alpha.5-3.tgz",
+  "_shasum": "be15f3f0d962b9b4b96eb530f1534d951783886a",
   "_shrinkwrap": null,
-  "_spec": "@angular2-material/input",
+  "_spec": "@angular2-material/input@^2.0.0-alpha.5-2",
   "_where": "/Users/amesg/repos/sentry-material",
   "bugs": {
     "url": "https://github.com/angular/material2/issues"
@@ -45,8 +54,8 @@
   "devDependencies": {},
   "directories": {},
   "dist": {
-    "shasum": "c6bc3a88a44c22f36bc9638a4a1da58818fe57cf",
-    "tarball": "https://registry.npmjs.org/@angular2-material/input/-/input-2.0.0-alpha.5-2.tgz"
+    "shasum": "be15f3f0d962b9b4b96eb530f1534d951783886a",
+    "tarball": "https://registry.npmjs.org/@angular2-material/input/-/input-2.0.0-alpha.5-3.tgz"
   },
   "homepage": "https://github.com/angular/material2#readme",
   "keywords": [
@@ -62,14 +71,14 @@
   "main": "./input.js",
   "maintainers": [
     {
-      "email": "angular-core+npm@google.com",
-      "name": "angular2-material"
+      "name": "angular2-material",
+      "email": "angular-core+npm@google.com"
     }
   ],
   "name": "@angular2-material/input",
   "optionalDependencies": {},
   "peerDependencies": {
-    "@angular2-material/core": "2.0.0-alpha.5-2"
+    "@angular2-material/core": "2.0.0-alpha.5-3"
   },
   "readme": "ERROR: No README data found!",
   "repository": {
@@ -78,5 +87,5 @@
   },
   "scripts": {},
   "typings": "./input.d.ts",
-  "version": "2.0.0-alpha.5-2"
+  "version": "2.0.0-alpha.5-3"
 }

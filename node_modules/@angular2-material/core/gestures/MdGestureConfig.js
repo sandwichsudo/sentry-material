@@ -66,4 +66,4 @@ var MdGestureConfig = (function (_super) {
     return MdGestureConfig;
 }(platform_browser_1.HammerGestureConfig));
 exports.MdGestureConfig = MdGestureConfig;
-//# sourceMappingURL=/usr/local/google/home/jelbourn/material2/tmp/broccoli_type_script_compiler-input_base_path-OxHzApZr.tmp/0/core/gestures/MdGestureConfig.js.map
+//# sourceMappingURL=MdGestureConfig.js.map

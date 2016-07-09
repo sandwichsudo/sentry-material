@@ -153,10 +153,4 @@ var BasePortalHost = (function () {
     return BasePortalHost;
 }());
 exports.BasePortalHost = BasePortalHost;
-var portal_directives_1 = require('./portal-directives');
-exports.PORTAL_DIRECTIVES = portal_directives_1.PORTAL_DIRECTIVES;
-exports.TemplatePortalDirective = portal_directives_1.TemplatePortalDirective;
-exports.PortalHostDirective = portal_directives_1.PortalHostDirective;
-var dom_portal_host_1 = require('./dom-portal-host');
-exports.DomPortalHost = dom_portal_host_1.DomPortalHost;
-//# sourceMappingURL=/usr/local/google/home/jelbourn/material2/tmp/broccoli_type_script_compiler-input_base_path-OxHzApZr.tmp/0/core/portal/portal.js.map
+//# sourceMappingURL=portal.js.map

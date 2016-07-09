@@ -71,18 +71,19 @@
   padding: 0;
   list-style: none; }
 
-@media (max-width: 900px) {
-  .two-column-list li {
-    width: 100%; } }
-
-@media (min-width: 900px) {
-  .two-column-list {
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: flex-start; }
+.two-column-list {
+  margin-bottom: 2em; }
+  @media (max-width: 900px) {
     .two-column-list li {
-      width: 400px;
-      margin-right: 2em; } }
+      width: 100%; } }
+  @media (min-width: 900px) {
+    .two-column-list {
+      flex-wrap: wrap;
+      display: flex;
+      justify-content: flex-start; }
+      .two-column-list li {
+        width: 400px;
+        margin-right: 2em; } }
 
 .info-list li {
   margin-bottom: 5px; }

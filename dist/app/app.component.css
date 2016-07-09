@@ -7,18 +7,19 @@
   padding: 0;
   list-style: none; }
 
-@media (max-width: 900px) {
-  .two-column-list li {
-    width: 100%; } }
-
-@media (min-width: 900px) {
-  .two-column-list {
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: flex-start; }
+.two-column-list {
+  margin-bottom: 2em; }
+  @media (max-width: 900px) {
     .two-column-list li {
-      width: 400px;
-      margin-right: 2em; } }
+      width: 100%; } }
+  @media (min-width: 900px) {
+    .two-column-list {
+      flex-wrap: wrap;
+      display: flex;
+      justify-content: flex-start; }
+      .two-column-list li {
+        width: 400px;
+        margin-right: 2em; } }
 
 .info-list li {
   margin-bottom: 5px; }
@@ -46,7 +47,7 @@
         max-width: 900px;
         margin: 0 auto; } }
   .app-header h1 {
-    margin: 0 2em 15px 0;
+    margin: 0 2em 0 0;
     display: inline-block; }
   .app-header .md-subtitle {
     font-family: 'Roboto'; }
@@ -54,10 +55,13 @@
   .app-header h1 {
     color: #e9eced; }
 
-nav a.router-link-active {
-  color: #009688; }
-  nav a.router-link-active i {
+nav a {
+  padding-top: 2px;
+  padding-bottom: 2px; }
+  nav a.router-link-active {
     color: #009688; }
+    nav a.router-link-active i {
+      color: #009688; }
 
 .app-toolbar-menu {
   color: #727272;

@@ -37,4 +37,4 @@ var OverlayRef = (function () {
     return OverlayRef;
 }());
 exports.OverlayRef = OverlayRef;
-//# sourceMappingURL=/usr/local/google/home/jelbourn/material2/tmp/broccoli_type_script_compiler-input_base_path-OxHzApZr.tmp/0/core/overlay/overlay-ref.js.map
+//# sourceMappingURL=overlay-ref.js.map

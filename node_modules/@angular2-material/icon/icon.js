@@ -22,7 +22,7 @@ exports.MdIconRegistry = icon_registry_2.MdIconRegistry;
 var MdIconInvalidNameError = (function (_super) {
     __extends(MdIconInvalidNameError, _super);
     function MdIconInvalidNameError(iconName) {
-        _super.call(this, "Invalid icon name: \"" + name + "\"");
+        _super.call(this, "Invalid icon name: \"" + iconName + "\"");
     }
     return MdIconInvalidNameError;
 }(error_1.MdError));
@@ -235,4 +235,4 @@ var MdIcon = (function () {
 }());
 exports.MdIcon = MdIcon;
 exports.MD_ICON_DIRECTIVES = [MdIcon];
-//# sourceMappingURL=/usr/local/google/home/jelbourn/material2/tmp/broccoli_type_script_compiler-input_base_path-OxHzApZr.tmp/0/components/icon/icon.js.map
+//# sourceMappingURL=icon.js.map

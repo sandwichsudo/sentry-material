@@ -36,6 +36,7 @@ testing_1.describe('ViewportRuler', function () {
         // successfully constrain its size. As such, skip assertions in environments where the
         // window size has changed since the start of the test.
         if (window.innerWidth > startingWindowWidth || window.innerHeight > startingWindowHeight) {
+            document.body.removeChild(veryLargeElement);
             return;
         }
         testing_1.expect(bounds.top).toBe(2000);
@@ -62,6 +63,7 @@ testing_1.describe('ViewportRuler', function () {
         // successfully constrain its size. As such, skip assertions in environments where the
         // window size has changed since the start of the test.
         if (window.innerWidth > startingWindowWidth || window.innerHeight > startingWindowHeight) {
+            document.body.removeChild(veryLargeElement);
             return;
         }
         var scrollPos = ruler.getViewportScrollPosition();
@@ -70,4 +72,4 @@ testing_1.describe('ViewportRuler', function () {
         document.body.removeChild(veryLargeElement);
     });
 });
-//# sourceMappingURL=/usr/local/google/home/jelbourn/material2/tmp/broccoli_type_script_compiler-input_base_path-OxHzApZr.tmp/0/core/overlay/position/viewport-ruler.spec.js.map
+//# sourceMappingURL=viewport-ruler.spec.js.map

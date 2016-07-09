@@ -14,18 +14,19 @@
   padding: 0;
   list-style: none; }
 
-@media (max-width: 900px) {
-  .two-column-list li {
-    width: 100%; } }
-
-@media (min-width: 900px) {
-  .two-column-list {
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: flex-start; }
+.two-column-list {
+  margin-bottom: 2em; }
+  @media (max-width: 900px) {
     .two-column-list li {
-      width: 400px;
-      margin-right: 2em; } }
+      width: 100%; } }
+  @media (min-width: 900px) {
+    .two-column-list {
+      flex-wrap: wrap;
+      display: flex;
+      justify-content: flex-start; }
+      .two-column-list li {
+        width: 400px;
+        margin-right: 2em; } }
 
 .info-list li {
   margin-bottom: 5px; }
@@ -145,24 +146,27 @@
   padding: 0;
   list-style: none; }
 
-@media (max-width: 900px) {
-  .two-column-list li {
-    width: 100%; } }
-
-@media (min-width: 900px) {
-  .two-column-list {
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: flex-start; }
+.two-column-list {
+  margin-bottom: 2em; }
+  @media (max-width: 900px) {
     .two-column-list li {
-      width: 400px;
-      margin-right: 2em; } }
+      width: 100%; } }
+  @media (min-width: 900px) {
+    .two-column-list {
+      flex-wrap: wrap;
+      display: flex;
+      justify-content: flex-start; }
+      .two-column-list li {
+        width: 400px;
+        margin-right: 2em; } }
 
 .info-list li {
   margin-bottom: 5px; }
 
 .copy-to-clipboard {
-  font-size: 14px; }
+  font-size: 14px;
+  padding-top: 2px;
+  padding-bottom: 2px; }
   .copy-to-clipboard md-icon {
     vertical-align: middle;
     color: #727272; }
@@ -226,7 +230,8 @@ md-card-content {
 .log-details-wrap .log-info-wrap {
   margin-right: 2em; }
 
-.ticket-info {
-  position: absolute;
-  top: 1.5em;
-  right: 1em; }
+@media (min-width: 900px) {
+  .ticket-info {
+    position: absolute;
+    top: 18px;
+    right: 1em; } }

@@ -51,7 +51,7 @@ var LogMessagingComponent = (function () {
         var count = 0;
         for (var i = 0; i < this.contacts.length; i++) {
             var contact = this.contacts[i];
-            if (((contact.id == changedContact.id) && $event.checked) || ((contact.id != changedContact.id) && contact.checked.checked)) {
+            if (((contact.id == changedContact.id) && $event) || ((contact.id != changedContact.id) && contact.checked)) {
                 this.emailTo += contact.email + ",";
                 count++;
             }

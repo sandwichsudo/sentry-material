@@ -1,5 +1,10 @@
-import { ElementRef, EventEmitter, Renderer, AfterContentInit } from '@angular/core';
+import { ElementRef, EventEmitter, Provider, Renderer, AfterContentInit } from '@angular/core';
 import { ControlValueAccessor } from '@angular/common';
+/**
+ * Provider Expression that allows md-checkbox to register as a ControlValueAccessor. This allows it
+ * to support [(ngModel)] and ngControl.
+ */
+export declare const MD_CHECKBOX_CONTROL_VALUE_ACCESSOR: Provider;
 export declare class MdCheckboxChange {
     source: MdCheckbox;
     checked: boolean;
@@ -52,7 +57,7 @@ export declare class MdCheckbox implements AfterContentInit, ControlValueAccesso
     private _currentCheckState;
     private _checked;
     private _indeterminate;
-    private _changeSubscription;
+    private _controlValueAccessorChangeFn;
     hasFocus: boolean;
     constructor(_renderer: Renderer, _elementRef: ElementRef);
     /**
@@ -81,7 +86,7 @@ export declare class MdCheckbox implements AfterContentInit, ControlValueAccesso
      * Implemented as part of ControlValueAccessor.
      * TODO: internal
      */
-    registerOnChange(fn: any): void;
+    registerOnChange(fn: (value: any) => void): void;
     /**
      * Implemented as part of ControlValueAccessor.
      * TODO: internal

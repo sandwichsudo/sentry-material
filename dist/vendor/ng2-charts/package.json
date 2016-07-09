@@ -1,11 +1,19 @@
 {
   "_args": [
     [
-      "ng2-charts",
+      {
+        "raw": "ng2-charts@^1.1.0",
+        "scope": null,
+        "escapedName": "ng2-charts",
+        "name": "ng2-charts",
+        "rawSpec": "^1.1.0",
+        "spec": ">=1.1.0 <2.0.0",
+        "type": "range"
+      },
       "/Users/amesg/repos/sentry-material"
     ]
   ],
-  "_from": "ng2-charts@latest",
+  "_from": "ng2-charts@>=1.1.0 <2.0.0",
   "_id": "ng2-charts@1.1.0",
   "_inCache": true,
   "_installable": true,
@@ -16,18 +24,23 @@
     "tmp": "tmp/ng2-charts-1.1.0.tgz_1463492528238_0.9077266661915928"
   },
   "_npmUser": {
-    "email": "valorkin@gmail.com",
-    "name": "valorkin"
+    "name": "valorkin",
+    "email": "valorkin@gmail.com"
   },
   "_npmVersion": "3.8.6",
-  "_phantomChildren": {},
+  "_phantomChildren": {
+    "chartjs-color-string": "0.4.0",
+    "color-convert": "0.5.3",
+    "moment": "2.14.1"
+  },
   "_requested": {
-    "name": "ng2-charts",
-    "raw": "ng2-charts",
-    "rawSpec": "",
+    "raw": "ng2-charts@^1.1.0",
     "scope": null,
-    "spec": "latest",
-    "type": "tag"
+    "escapedName": "ng2-charts",
+    "name": "ng2-charts",
+    "rawSpec": "^1.1.0",
+    "spec": ">=1.1.0 <2.0.0",
+    "type": "range"
   },
   "_requiredBy": [
     "/"
@@ -35,24 +48,24 @@
   "_resolved": "https://registry.npmjs.org/ng2-charts/-/ng2-charts-1.1.0.tgz",
   "_shasum": "7c502c6150fdab45bac4585eb2c3892fae0f1bb3",
   "_shrinkwrap": null,
-  "_spec": "ng2-charts",
+  "_spec": "ng2-charts@^1.1.0",
   "_where": "/Users/amesg/repos/sentry-material",
   "author": {
-    "email": "valorkin@gmail.com",
-    "name": "Dmitriy Shekhovtsov"
+    "name": "Dmitriy Shekhovtsov",
+    "email": "valorkin@gmail.com"
   },
   "bugs": {
     "url": "https://github.com/valor-software/ng2-charts/issues"
   },
   "contributors": [
     {
-      "email": "valorkin@gmail.com",
       "name": "Dmitriy Shekhovtsov",
+      "email": "valorkin@gmail.com",
       "url": "https://github.com/valorkin"
     },
     {
-      "email": "nataliya.soloviova@valor-software.com",
       "name": "Soloviova Nataliya",
+      "email": "nataliya.soloviova@valor-software.com",
       "url": "https://github.com/natali-abyss"
     }
   ],
@@ -125,15 +138,15 @@
   "main": "ng2-charts.js",
   "maintainers": [
     {
-      "email": "valorkin@gmail.com",
-      "name": "valorkin"
+      "name": "valorkin",
+      "email": "valorkin@gmail.com"
     }
   ],
   "name": "ng2-charts",
   "optionalDependencies": {},
   "peerDependencies": {
-    "@angular/common": "^2.0.0-rc.1",
-    "@angular/core": "^2.0.0-rc.1"
+    "@angular/core": "^2.0.0-rc.1",
+    "@angular/common": "^2.0.0-rc.1"
   },
   "readme": "ERROR: No README data found!",
   "repository": {

@@ -32,10 +32,13 @@ var defaultState = new overlay_state_1.OverlayState();
  * An overlay *is* a PortalHost, so any kind of Portal can be loaded into one.
  */
 var Overlay = (function () {
-    function Overlay(_overlayContainerElement, _componentResolver, _positionBuilder) {
-        this._overlayContainerElement = _overlayContainerElement;
+    function Overlay(overlayContainerElement, _componentResolver, _positionBuilder) {
         this._componentResolver = _componentResolver;
         this._positionBuilder = _positionBuilder;
+        // We inject the container as `any` because the constructor signature cannot reference
+        // browser globals (HTMLElement) on non-browser environments, since having a class decorator
+        // causes TypeScript to preserve the constructor signature types.
+        this._overlayContainerElement = overlayContainerElement;
     }
     /**
      * Creates an overlay.
@@ -85,7 +88,7 @@ var Overlay = (function () {
     Overlay = __decorate([
         core_1.Injectable(),
         __param(0, core_1.Inject(exports.OVERLAY_CONTAINER_TOKEN)), 
-        __metadata('design:paramtypes', [HTMLElement, core_1.ComponentResolver, overlay_position_builder_1.OverlayPositionBuilder])
+        __metadata('design:paramtypes', [Object, core_1.ComponentResolver, overlay_position_builder_1.OverlayPositionBuilder])
     ], Overlay);
     return Overlay;
 }());
@@ -96,15 +99,4 @@ exports.OVERLAY_PROVIDERS = [
     overlay_position_builder_1.OverlayPositionBuilder,
     Overlay,
 ];
-// Re-export overlay-related modules so they can be imported directly from here.
-var overlay_state_2 = require('./overlay-state');
-exports.OverlayState = overlay_state_2.OverlayState;
-var overlay_ref_2 = require('./overlay-ref');
-exports.OverlayRef = overlay_ref_2.OverlayRef;
-var overlay_container_1 = require('./overlay-container');
-exports.createOverlayContainer = overlay_container_1.createOverlayContainer;
-var overlay_directives_1 = require('./overlay-directives');
-exports.OVERLAY_DIRECTIVES = overlay_directives_1.OVERLAY_DIRECTIVES;
-exports.ConnectedOverlayDirective = overlay_directives_1.ConnectedOverlayDirective;
-exports.OverlayOrigin = overlay_directives_1.OverlayOrigin;
-//# sourceMappingURL=/usr/local/google/home/jelbourn/material2/tmp/broccoli_type_script_compiler-input_base_path-OxHzApZr.tmp/0/core/overlay/overlay.js.map
+//# sourceMappingURL=overlay.js.map

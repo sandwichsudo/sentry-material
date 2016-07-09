@@ -6,6 +6,11 @@
       </md-card-title>
       <md-card-content>
         <p class="status">{{log.getStatusMessage()}}</p>
+        <ul class="info-list ticket-info">
+          <li><span>Assignee: {{log.assignee}}</span></li>
+          <li><span>Last Updated: {{log.lastUpdated | date }}</span></li>
+          <li><span>Status: {{log.status}}</span></li>
+        </ul>
         <div class="log-details-wrap">
             <div class="log-info-wrap">
                 <h3 class="md-subhead">Log details</h3>
@@ -30,11 +35,6 @@
                   </li>
                 </ul>
             </div>
-            <ul class="info-list ticket-info">
-              <li><span>Assignee: {{log.assignee}}</span></li>
-              <li><span>Last Updated: {{log.lastUpdated | date }}</span></li>
-              <li><span>Status: {{log.status}}</span></li>
-            </ul>
         </div>
 
       </md-card-content>
