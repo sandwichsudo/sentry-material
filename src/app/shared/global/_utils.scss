@@ -81,6 +81,7 @@ $default-font-size: 16px;
     list-style: none;
 }
 .two-column-list{
+    margin-bottom: 2em;
     @extend .list;
     @media (max-width: $widescreen-min) {
         li{
