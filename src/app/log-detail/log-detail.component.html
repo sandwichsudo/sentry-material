@@ -5,34 +5,45 @@
         <h2 class="md-title"><md-icon>{{log.getIcon()}}</md-icon><span class="heading-content">{{log.logUrl}}</span></h2>
       </md-card-title>
       <md-card-content>
-        <span>{{log.getStatusMessage()}}</span>
-        <ul>
-          <li>
-            <span>Name: {{log.name}}</span>
-          </li>
-          <li>
-            <span>Operator: {{log.operator}}</span>
-          </li>
-          <li>
-            <span>Started: {{log.started}}</span>
-          </li>
-          <li>
-            <span>Chrome inclusion status: {{log.cis}}</span>
-          </li>
-          <li>
-            <span><abbr title="Maximum merge delay">MMD</abbr>: {{log.mmd}}</span>
-          </li>
-          <li>
-            <span>HTTPS supported: {{log.https}}</span>
-          </li>
-        </ul>
+        <p class="status">{{log.getStatusMessage()}}</p>
+        <div class="log-details-wrap">
+            <div class="log-info-wrap">
+                <h3 class="md-subhead">Log details</h3>
+                <ul>
+                  <li>
+                    <span>Name: {{log.name}}</span>
+                  </li>
+                  <li>
+                    <span>Operator: {{log.operator}}</span>
+                  </li>
+                  <li>
+                    <span>Started: {{log.started}}</span>
+                  </li>
+                  <li>
+                    <span>Chrome inclusion status: {{log.cis}}</span>
+                  </li>
+                  <li>
+                    <span><abbr title="Maximum merge delay">MMD</abbr>: {{log.mmd}}</span>
+                  </li>
+                  <li>
+                    <span>HTTPS supported: {{log.https}}</span>
+                  </li>
+                </ul>
+            </div>
+            <ul class="info-list ticket-info">
+              <li><span>Assignee: {{log.assignee}}</span></li>
+              <li><span>Last Updated: {{log.lastUpdated | date }}</span></li>
+              <li><span>Status: {{log.status}}</span></li>
+            </ul>
+        </div>
+
       </md-card-content>
     </div>
     <div class="log-actions">
-      <a href="{{log.bugUrl}}" class="log-action">
+      <a href="{{log.bugUrl}}" class="log-action" title="Go to bugganiser">
         <md-icon>bug_report</md-icon>
       </a>
-      <button md-button (click)="goToNotify(log)" class="log-action">
+      <button md-button (click)="goToNotify(log)" class="log-action" title="Create email to operator">
         <md-icon>email</md-icon>
       </button>
     </div>

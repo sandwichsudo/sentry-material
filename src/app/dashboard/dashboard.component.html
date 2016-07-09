@@ -10,16 +10,21 @@
                 <h2 class="md-title"><md-icon>{{log.getIcon()}}</md-icon><span class="heading-content">{{log.logUrl}}</span></h2>
               </md-card-title>
               <md-card-content>
-                <span>{{log.getStatusMessage()}}</span>
+                <ul class="info-list">
+                  <li><span>{{log.getStatusMessage()}}</span></li>
+                  <li><span>Assignee: {{log.assignee}}</span></li>
+                  <li><span>Last Updated: {{log.lastUpdated | date }}</span></li>
+                  <li><span>Status: {{log.status}}</span></li>
+                </ul>
               </md-card-content>
             </a>
           </div>
         </md-card>
         <div class="log-actions">
-          <a href="{{log.bugUrl}}" class="log-action">
+          <a href="{{log.bugUrl}}" class="log-action" title="Go to bugganiser">
             <md-icon>bug_report</md-icon>
           </a>
-          <button md-button (click)="goToNotify(log)" class="log-action">
+          <button md-button (click)="goToNotify(log)" class="log-action" title="copy to clipboard">
             <md-icon>email</md-icon>
           </button>
         </div>
