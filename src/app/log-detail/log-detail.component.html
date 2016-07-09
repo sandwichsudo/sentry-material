@@ -38,18 +38,14 @@
     </div>
   </div>
   <div class="log-ids">
-    <p>
       <button md-raised-button (click)="copyToClipboard('hexid')" title="copy to clipboard" class="copy-to-clipboard" aria-label="Copy to clipboard">
         <md-icon>content_copy</md-icon><span class="with-icon"> Copy HexID</span>
       </button>
       <input value="{{log.hexid}}" class="copy-helper" name="hexid" type="text">
-    </p>
-    <p>
       <button md-raised-button (click)="copyToClipboard('base64id')" title="copy to clipboard" class="copy-to-clipboard" aria-label="Copy to clipboard">
         <md-icon>content_copy</md-icon><span class="with-icon"> Copy Base64Id</span>
       </button>
       <input value="{{log.base64id}}" class="copy-helper" name="base64id" type="text">
-    </p>
   </div>
   <av-graph [log]="log"></av-graph>
   <mmd-graph [log]="log"></mmd-graph>

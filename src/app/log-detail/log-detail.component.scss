@@ -12,6 +12,19 @@
 .log-ids {
   @include module-margin();
 }
+.log-ids {
+  @media (max-width: $mobile-max){
+    .copy-to-clipboard{
+        width:100%;
+        margin-bottom:10px;
+    }
+  }
+ }
+@media (min-width: $mobile-max){
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+}
 .log-detail-wrapper {
   .log-container {
     padding: 0;

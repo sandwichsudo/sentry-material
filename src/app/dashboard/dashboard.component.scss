@@ -1,13 +1,6 @@
 @import '../shared/log-info/log-info.scss';
 @import '../shared/global/messaging.scss';
 @import '../shared/global/utils.scss';
-.list{
-  margin:0;
-  padding:0;
-  list-style: none;
-  min-width:300px;
-  max-width:500px;
-}
 
 .log-container{
   &:hover {

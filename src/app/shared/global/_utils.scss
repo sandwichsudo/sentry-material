@@ -1,17 +1,23 @@
 @import '../global/colour-palette.scss'; // breakpoints
 $mobile-max: 480px;
+$widescreen-min: 900px;
 $side-margin-left: 3.5em;
 $side-margin-left-mobile: 1.5em;
 $side-margin-right: 2em;
 $default-font-size: 16px;
+
 @mixin module-margin() {
-   @media (max-width: $mobile-max){
+  @media (max-width: $mobile-max){
     margin-right:$side-margin-right;
     margin-left:$side-margin-left-mobile;
   }
-  @media (min-width: $mobile-max) {
+  @media (min-width: $mobile-max) and (max-width: $widescreen-min) {
       margin-right:$side-margin-right;
       margin-left:$side-margin-left-mobile;
+  }
+  @media (min-width: $widescreen-min) {
+      max-width:$widescreen-min;
+      margin: 0 auto;
   }
 }
 
@@ -67,4 +73,27 @@ $default-font-size: 16px;
 %vis-hide {
   position: absolute;
   left: -999999px;
+}
+
+.list {
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+.two-column-list{
+    @extend .list;
+    @media (max-width: $widescreen-min) {
+        li{
+            width: 100%;
+        }
+    }
+    @media (min-width: $widescreen-min) {
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: flex-start;
+        li{
+            width: 400px;
+            margin-right: 2em;
+        }
+    }
 }
