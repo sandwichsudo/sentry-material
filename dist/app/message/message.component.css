@@ -1,14 +1,14 @@
 .error md-icon {
-  color: #db2721; }
+  color: #DB4437; }
 
 .warning md-icon {
-  color: #ce872a; }
+  color: #F4B400; }
 
 .info md-icon {
-  color: #0089ff; }
+  color: #4285F4; }
 
 .working md-icon {
-  color: #0bbc87; }
+  color: #0F9D58; }
 
 .message-container {
   padding: 10px 10px 10px 18px;
@@ -25,14 +25,35 @@
     margin-right: 5px;
     vertical-align: middle; }
   .message-container.error {
-    background-color: #db2721; }
+    background-color: #DB4437; }
   .message-container.warning {
-    background-color: #ce872a; }
+    background-color: #F4B400; }
   .message-container.info {
-    background-color: #0089ff; }
+    background-color: #4285F4; }
   .message-container.working {
-    background-color: #0bbc87; }
+    background-color: #0F9D58; }
 
 .with-icon {
   vertical-align: middle;
   margin-left: 5px; }
+
+.list, .two-column-list, .info-list {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+@media (max-width: 900px) {
+  .two-column-list li {
+    width: 100%; } }
+
+@media (min-width: 900px) {
+  .two-column-list {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: flex-start; }
+    .two-column-list li {
+      width: 400px;
+      margin-right: 2em; } }
+
+.info-list li {
+  margin-bottom: 5px; }

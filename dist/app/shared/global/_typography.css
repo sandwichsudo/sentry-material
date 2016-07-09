@@ -2,9 +2,31 @@
   vertical-align: middle;
   margin-left: 5px; }
 
+.list, .two-column-list, .info-list {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+@media (max-width: 900px) {
+  .two-column-list li {
+    width: 100%; } }
+
+@media (min-width: 900px) {
+  .two-column-list {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: flex-start; }
+    .two-column-list li {
+      width: 400px;
+      margin-right: 2em; } }
+
+.info-list li {
+  margin-bottom: 5px; }
+
 .md-display-3, .md-display-2, .md-display-1, .md-headline, .md-title, .md-subhead {
   font-family: 'Roboto';
-  font-weight: normal; }
+  font-weight: normal;
+  display: block; }
 
 .md-display-4 {
   font-size: 60px; }

@@ -9,6 +9,27 @@
   min-height: 30px;
   line-height: 16px; }
 
+.list, .two-column-list, .info-list {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+@media (max-width: 900px) {
+  .two-column-list li {
+    width: 100%; } }
+
+@media (min-width: 900px) {
+  .two-column-list {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: flex-start; }
+    .two-column-list li {
+      width: 400px;
+      margin-right: 2em; } }
+
+.info-list li {
+  margin-bottom: 5px; }
+
 .log-card {
   font-family: 'Roboto';
   padding: 0;
@@ -31,25 +52,19 @@
     .log-card h2 md-icon {
       vertical-align: top; }
   .log-card.error {
-    border-left: solid 5px #db2721; }
+    border-left: solid 5px #DB4437; }
   .log-card.warning {
-    border-left: solid 5px #ce872a; }
+    border-left: solid 5px #F4B400; }
   .log-card.info {
-    border-left: solid 5px #0089ff; }
+    border-left: solid 5px #4285F4; }
   .log-card.working {
-    border-left: solid 5px #0bbc87; }
-
-.list {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
+    border-left: solid 5px #0F9D58; }
 
 .log-container {
   text-decoration: none;
   color: #212121;
   display: block;
-  padding: 1em;
-  min-width: 300px; }
+  padding: 1em; }
 
 .log-card-and-actions {
   position: relative;
