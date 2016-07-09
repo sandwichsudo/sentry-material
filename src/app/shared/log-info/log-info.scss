@@ -40,17 +40,13 @@
     border-left: solid 5px $working-color;
   }
 }
-.list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
+
 .log-container {
   text-decoration: none;
   color: $primary-text-color;
   display: block;
   padding: 1em;
-  min-width: 300px;
+ // min-width: 300px;
 }
 .log-card-and-actions {
   position: relative;

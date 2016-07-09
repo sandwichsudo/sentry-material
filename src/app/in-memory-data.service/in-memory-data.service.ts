@@ -89,6 +89,10 @@ export class InMemoryDataService {
       cis: 'Included',
       mmd: '24 hours',
       https: 'yes',
+      status: 'Open',
+      lastUpdated:1468080945399,
+      assigneeEmail: 'rob.percival@gmail.com',
+      assignee:'Rob Percival',
       priority: 0,
       contactDetails: ['fac1@fail.com', 'aguy@facebook.com', 'a.n.otherguy@facebook.com']
     }, {
@@ -103,6 +107,10 @@ export class InMemoryDataService {
         cis: 'Included',
         mmd: '24 hours',
         https: 'yes',
+        status: 'Open',
+        lastUpdated:1468080945399,
+        assigneeEmail: 'rob.percival@gmail.com',
+        assignee:'Rob Percival',
         priority: 1,
         contactDetails: ['fac2@fail.com', 'aguy@facebook.com', 'a.n.otherguy@facebook.com']
       }, {
@@ -117,6 +125,10 @@ export class InMemoryDataService {
         cis: 'Included',
         mmd: '24 hours',
         https: 'yes',
+        status: 'Open',
+        lastUpdated:1468080945399,
+        assigneeEmail: 'rob.percival@gmail.com',
+        assignee:'Rob Percival',
         priority: -1,
         contactDetails: ['fac3@fail.com', 'aguy@facebook.com', 'a.n.otherguy@facebook.com']
       }, {
@@ -131,6 +143,10 @@ export class InMemoryDataService {
         cis: 'Included',
         mmd: '24 hours',
         https: 'yes',
+        status: 'Open',
+        lastUpdated:1468080945399,
+        assigneeEmail: 'rob.percival@gmail.com',
+        assignee:'Rob Percival',
         priority: 2,
         contactDetails: ['tw1@fail.com', 'aguy@twitter.com', 'a.n.otherguy@twitter.com']
       }, {
@@ -145,6 +161,10 @@ export class InMemoryDataService {
         cis: 'Included',
         mmd: '24 hours',
         https: 'yes',
+        status: 'Open',
+        lastUpdated:1468080945399,
+        assigneeEmail: 'rob.percival@gmail.com',
+        assignee:'Rob Percival',
         priority: -1,
         contactDetails: ['ins1@fail.com', 'aguy@instagram.com', 'a.n.otherguy@instagram.com']
       }, {
@@ -159,6 +179,10 @@ export class InMemoryDataService {
         cis: 'Included',
         mmd: '24 hours',
         https: 'yes',
+        status: 'Open',
+        lastUpdated:1468080945399,
+        assigneeEmail: 'rob.percival@gmail.com',
+        assignee:'Rob Percival',
         priority: 3,
         contactDetails: ['ins2@fail.com', 'aguy@instagram.com', 'a.n.otherguy@instagram.com']
       }]

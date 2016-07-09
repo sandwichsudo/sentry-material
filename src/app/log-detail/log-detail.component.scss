@@ -12,6 +12,19 @@
 .log-ids {
   @include module-margin();
 }
+.log-ids {
+  @media (max-width: $mobile-max){
+    .copy-to-clipboard{
+        width:100%;
+        margin-bottom:10px;
+    }
+  }
+ }
+@media (min-width: $mobile-max){
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+}
 .log-detail-wrapper {
   .log-container {
     padding: 0;
@@ -34,4 +47,21 @@ md-card-content {
 }
 .log-card {
   background: white;
+  position:relative;
+}
+.status{
+    margin-top:0;
+}
+.log-details-wrap{
+    .md-subhead{
+        margin-top:0;
+    }
+    .log-info-wrap{
+        margin-right:2em;
+    }
+}
+.ticket-info{
+    position:absolute;
+    top:1.5em;
+    right:1em;
 }
