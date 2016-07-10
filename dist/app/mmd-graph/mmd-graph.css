@@ -2,13 +2,39 @@
   vertical-align: middle;
   margin-left: 5px; }
 
+.list, .two-column-list, .info-list {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.two-column-list {
+  margin-bottom: 2em; }
+  @media (max-width: 900px) {
+    .two-column-list li {
+      width: 100%; } }
+  @media (min-width: 900px) {
+    .two-column-list {
+      flex-wrap: wrap;
+      display: flex;
+      justify-content: flex-start; }
+      .two-column-list li {
+        width: 400px;
+        margin-right: 2em; } }
+
+.info-list li {
+  margin-bottom: 5px; }
+
 .chart {
   display: block; }
   @media (max-width: 480px) {
     .chart {
       margin-right: 2em;
       margin-left: 1.5em; } }
-  @media (min-width: 480px) {
+  @media (min-width: 480px) and (max-width: 900px) {
     .chart {
       margin-right: 2em;
       margin-left: 1.5em; } }
+  @media (min-width: 900px) {
+    .chart {
+      max-width: 900px;
+      margin: 0 auto; } }
