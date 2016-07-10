@@ -52,7 +52,7 @@ export class LogMessagingComponent implements OnInit {
     let count =0;
     for(let i=0; i<this.contacts.length; i++){
         let contact = this.contacts[i];
-        if(((contact.id == changedContact.id) && $event) || ((contact.id != changedContact.id) && contact.checked)){
+        if(((contact.id == changedContact.id) && $event.checked) || ((contact.id != changedContact.id) && contact.checked.checked)){
             this.emailTo += `${contact.email},`;
             count++;
         }
