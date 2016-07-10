@@ -12,7 +12,7 @@
     flex-wrap: wrap;
   }
   h1 {
-    margin: 0 2em 15px 0;
+    margin: 0 2em 0 0;
     display: inline-block;
   }
   .md-subtitle {
@@ -25,6 +25,8 @@
 }
 nav {
   a {
+    padding-top: 2px;
+    padding-bottom: 2px;
     &.router-link-active {
       i {
         color: $accent-color;
